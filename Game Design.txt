@@ -1,0 +1,252 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\froman\fcharset0 Times-Roman;\f2\froman\fcharset0 Times-Italic;
+\f3\fnil\fcharset0 LucidaGrande;}
+{\colortbl;\red255\green255\blue255;\red45\green59\blue69;\red17\green85\blue204;}
+{\*\expandedcolortbl;;\csgenericrgb\c17647\c23137\c27059;\csgenericrgb\c6667\c33333\c80000;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid302\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid303\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li2160\lin2160 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid401\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid402\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid403\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li2160\lin2160 }{\listname ;}\listid5}
+{\list\listtemplateid6\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid501\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid6}
+{\list\listtemplateid7\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid601\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid602\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid603\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li2160\lin2160 }{\listname ;}\listid7}
+{\list\listtemplateid8\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid701\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid702\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid703\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li2160\lin2160 }{\listname ;}\listid8}
+{\list\listtemplateid9\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid801\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid9}
+{\list\listtemplateid10\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid901\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid902\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid10}
+{\list\listtemplateid11\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1001\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1002\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid11}
+{\list\listtemplateid12\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1102\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid12}
+{\list\listtemplateid13\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1202\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid13}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}{\listoverride\listid7\listoverridecount0\ls7}{\listoverride\listid8\listoverridecount0\ls8}{\listoverride\listid9\listoverridecount0\ls9}{\listoverride\listid10\listoverridecount0\ls10}{\listoverride\listid11\listoverridecount0\ls11}{\listoverride\listid12\listoverridecount0\ls12}{\listoverride\listid13\listoverridecount0\ls13}}
+\margl1440\margr1440\vieww12540\viewh15280\viewkind1
+\deftab720
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+
+\f0\b\fs26 \cf2 Gameplay
+\f1\b0\fs22 \
+General Overview\
+\pard\tx360\tx1080\pardeftab720\li1080\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls1\ilvl0\cf2 -	For reference, look {\field{\*\fldinst{HYPERLINK "https://www.crazygames.com/game/sprinter"}}{\fldrslt \cf3 \ul \ulc3 at this game}}. Basically, it's going to be a horse version of this. Replicate the rhythm style alternate arrow key pressing, but we\'92re going to incorporate the space bar. The game has multiple horse races in a row, and when the race starts, you alternate pressing the arrow keys. The faster you alternate, the faster you go. Eventually, there will be a jump in your lane (oh ya, each horse has its own lane. Keep it simple) that you have to jump over. This will be done with the space bar. If you do not clear the jump, you lose the race and go back to level 1. Each level should have 5 other racers that get increasingly faster after each race. You travel in a straight line. \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\ls1\ilvl0\cf2 \
+Objective\
+\pard\tx360\tx1080\pardeftab720\li1080\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls2\ilvl0\cf2 -	To cross the finish line before all of the bot racers. If you do not win the race, the race restarts. If you win the race, you advance to the next level\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\ls2\ilvl0\cf2 \
+Basics of Gameplay\
+\pard\tx360\tx1080\pardeftab720\li1080\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls3\ilvl0\cf2 -	When the game is started, the first level is automatically displayed (details on display later)\
+\pard\tx360\tx1080\pardeftab720\li1080\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls4\ilvl0\cf2 -	Each level starts with a view of the horses at the starting line (more on these graphics below) and the words \'93Press space to begin\'94. Once the user presses space, a count down will start from 3 seconds, ending with a large \'93GO!\'94\
+\pard\tx1080\tx1800\pardeftab720\li1800\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls4\ilvl1\cf2 -	The keys will become clickable immediately after \'93GO\'94 is displayed\
+\pard\tx360\tx1080\pardeftab720\li1080\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls4\ilvl0\cf2 -	Rhythm game\'97the user must quickly alternate pressing the arrow keys (the left and right arrow keys, not the up and down arrow keys) to get their horse to move and accelerate.\
+-	The user\'92s horse is randomly assigned a lane, and the 5 other automated opponents (characteristics outlined below) will fill up each of the other 5 lanes.\
+\pard\tx1080\tx1800\pardeftab720\li1800\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls4\ilvl1\cf2 -	User horse has a red arrow above it to denote that it is the user\'92s horse\
+\pard\tx360\tx1080\pardeftab720\li1080\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls4\ilvl0\cf2 -	The space bar is used to jump over a fence. The number of fences are outlined in the level descriptions below, but they should all be equidistant from one another. 
+\f0\b \
+\ls4\ilvl0
+\f1\b0 -	Each click of an arrow counts as one step, and each step moves the user along the track 1m.\
+-	Stumbling: 
+\f0\b If you press the same arrow key twice in a row, your horse stumbles and loses speed.
+\f1\b0 \
+\pard\tx1080\tx1800\pardeftab720\li1800\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls4\ilvl1\cf2 -	If a horse stumbles, the horse will remain on the ground for .3 seconds (the arrow keys are unclickable during this time period)\
+-	When the keys become clickable again, the pattern resets and the next arrow click will begin a new clicking pattern. Therefore, the horse loses all acceleration when it stumbles, and must start from 0. \
+\pard\tx360\tx1080\pardeftab720\li1080\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls4\ilvl0\cf2 -	It is not possible to run into other horses, each horse will stay in its lane.\
+-	Keep track of all opponents\'92s names and times to display alongside the user (\'93You\'94)\'92s name and time after race finishes\
+\pard\tx1080\tx1800\pardeftab720\li1800\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls4\ilvl1\cf2 -	Only actually 
+\f2\i store
+\f1\i0  user score if it is a high score for that level\
+-	Before playing each level, put up a graphic of the users current high score, if any (more in graphics)\
+\pard\tx360\tx1080\pardeftab720\li1080\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls4\ilvl0\cf2 -	At finish line, a message page will be displayed for 3 seconds with feedback (more on that in graphics) and if the user won, they are taken to the next level, and if not, the same level is replayed, with the \'93Press space to begin\'94 being displayed at the start. \
+\pard\tx1080\tx1800\pardeftab720\li1800\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls4\ilvl1\cf2 -	\
+\pard\tx360\tx1080\pardeftab720\li1080\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls4\ilvl0\cf2 -	Opponents:\
+\pard\tx1080\tx1800\pardeftab720\li1800\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls4\ilvl1\cf2 -	5 each race\
+-	NOTE: OPPONENTS CAN\'92T STUMBLE/FALL\
+-	Each opponent has a degree of randomness in their speed each round\'97 they operate in a range of speed so every race is unique. Speeds will be outlined below\
+-	Their names should be selected from a random list of names that will be specified for each level in the level description\
+\pard\tx1800\tx2520\pardeftab720\li2520\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls4\ilvl2\cf2 -	Names will be used in the final ranking display alongside time (more on that later)\
+-	\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\ls4\ilvl0\cf2 \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\ls4\ilvl0
+\f0\b \cf2 Graphic Design\
+\pard\tx360\tx1080\pardeftab720\li1080\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls5\ilvl0
+\f1\b0 \cf2 -	Racetrack/Background:\
+\pard\tx1080\tx1800\pardeftab720\li1800\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls5\ilvl1\cf2 -	Each level has the exact same background\
+\pard\tx1800\tx2520\pardeftab720\li2520\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls5\ilvl2\cf2 -	\
+\pard\tx1080\tx1800\pardeftab720\li1800\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls5\ilvl1\cf2 -	Imagine a graphic design similar to this, but with the differences we\'92ve specified below\
+-	The racetrack should be HORIZONTAL rather than tilting at a 45 degree angle from one corner of the screen\
+-	In the top right corner of Green 1, display in black text the user\'92s current high score\
+-	 Orthographic perspective\
+-	The racetrack should take up the middle 
+\f3 \uc0\u8535 
+\f1  of the screen panel, and each strip on the top and bottom should take up 
+\f3 \uc0\u8533 
+\f1  of the screen panel. \
+-	The runners will run in the left direction.\
+-	The racetrack should be a uniform pale yellow/sand color with white lines for the borders of each lane. There should be a vertical/perpendicular-to-the-lane-lines white line for the starting line, and a number at the start of each lane (just to the left of the starting line and facing down the track). \
+-	After the starting line, there should be a vertical/perpendicular white line every 10 yards. However, only every 20 yards should there be a number right next to the vertical white line above the racetrack (so facing down the track, positioned right at the bottom of Green 2, that displays how far the horses have run. An example of this number placement can be seen when playing the reference game at the top of this document. However, our distance markers should be every 20 yards, not every 10 yards. \
+-	The strips on the top and bottom of the screen (Green 1 and Green 2) should both be a uniform green (any green is fine, a shade similar to the green in the above image would work nicely).\
+-	Have 6 clearly defined lanes\
+\pard\tx1800\tx2520\pardeftab720\li2520\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls5\ilvl2\cf2 -	There will be 5 other racers besides the player\
+\pard\tx1080\tx1800\pardeftab720\li1800\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls5\ilvl1\cf2 -	
+\f0\b Starting Position:\
+\pard\tx1800\tx2520\pardeftab720\li2520\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls5\ilvl2
+\f1\b0 \cf2 -	At the start of each race, the starting line should be positioned \'bd of the way down the length of the screen. As the player moves, the player should always remain \'bd of the way through the length of the screen, no matter how fast they are running. Essentially, the view of the track and greens moves at the same pace as the player, regardless of where the automated opponents are.
+\f0\b \
+\ls5\ilvl2
+\f1\b0 -	Half of the way down the screen, and 
+\f3 \uc0\u8531 
+\f1  of the way from the left of the screen, is where the countdown occurs. There needn\'92t be a screen graphic, simply black numbers counting down 
+\f0\b (3\'852\'851\'85GO) 
+\f1\b0 with one second in between each of these characters being displayed. \
+\pard\tx1080\tx1800\pardeftab720\li1800\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls5\ilvl1\cf2 -	
+\f0\b Ending Position:\
+\pard\tx1800\tx2520\pardeftab720\li2520\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls5\ilvl2
+\f1\b0 \cf2 -	The horse must stop dead in its tracks 3m after the finish line. Then, after all of the horses have stopped dead in their tracks and the race is thus over, the screen should change to uniform white and a message should be displayed in the center in black text, saying either \'93You won!!\'94 or saying \'93You finished in ___ place\'94 depending on which place they finished in. Then the screen will transition to either the next round or replaying the same round.\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\ls5\ilvl0\cf2 \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\ls5\ilvl0
+\f0\b \cf2 Sound Effects: \
+\pard\tx360\tx1080\pardeftab720\li1080\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls6\ilvl0
+\f1\b0 \cf2 -	
+\f0\b \
+\pard\tx1800\tx2520\pardeftab720\li2520\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls7\ilvl2
+\f1\b0 \cf2 -	\
+\pard\tx360\tx1080\pardeftab720\li1080\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls8\ilvl0\cf2 -	Running Animations:\
+\pard\tx1080\tx1800\pardeftab720\li1800\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls8\ilvl1\cf2 -	Quick horse sprites with run animations. Animation speed would speed up the faster you alternate keys.\
+-	The player horse should have its own style.\
+-	For each level, the bot racers can have a visual difference. Perhaps they go from baby horse to crazy demon monster horse.\
+-	General art style can be pixelated. Very simple.\
+-	{\field{\*\fldinst{HYPERLINK "https://opengameart.org/content/pixel-horse"}}{\fldrslt \cf3 \ul \ulc3 https://opengameart.org/content/pixel-horse}}\
+\pard\tx1800\tx2520\pardeftab720\li2520\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls8\ilvl2\cf2 -	Horse running animation\
+-	\
+\pard\tx1080\tx1800\pardeftab720\li1800\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls8\ilvl1\cf2 -	{\field{\*\fldinst{HYPERLINK "https://craftpix.net/product/animal-sprite-sheets-pixel-art-pack/"}}{\fldrslt \cf3 \ul \ulc3 https://craftpix.net/product/animal-sprite-sheets-pixel-art-pack/}}\
+\pard\tx1800\tx2520\pardeftab720\li2520\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls8\ilvl2\cf2 -	More horses+polar bear+elk+people riding animals\
+-	$5.50\
+\pard\tx1080\tx1800\pardeftab720\li1800\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls8\ilvl1\cf2 -	{\field{\*\fldinst{HYPERLINK "https://www.spriters-resource.com/snes/junglenooujatarchanjpn/sheet/50555/"}}{\fldrslt \cf3 \ul \ulc3 https://www.spriters-resource.com/snes/junglenooujatarchanjpn/sheet/50555/}}\
+\pard\tx1800\tx2520\pardeftab720\li2520\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls8\ilvl2\cf2 -	Zebra + cheetah sprite\
+-	\
+\pard\tx1080\tx1800\pardeftab720\li1800\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls8\ilvl1\cf2 -	Simple jumping animations\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\ls8\ilvl0\cf2 \
+Running sound effect:\
+https://www.youtube.com/watch?v=pa2BoSdvjhI\
+\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\ls8\ilvl0
+\f0\b\fs26 \cf2 Level Design\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\ls8\ilvl0
+\f2\i\b0\fs22 \cf2 General Level Info\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\ls8\ilvl0
+\f1\i0 \cf2 \
+\pard\tx360\tx1080\pardeftab720\li1080\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls9\ilvl0\cf2 -	Each level will be the same distance of 200m. \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\ls9\ilvl0
+\f2\i \cf2 Level 1\
+\pard\tx360\tx1080\pardeftab720\li1080\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls10\ilvl0
+\f1\i0 \cf2 -	Opponents are turtles. Shown below\
+-	Pool of opponent names: Rafael, Donnatello, Leonardo, Shelly, Mr. Green, Tuck, Franklin, Michaelangelo\
+-	They run at constant speeds between 3-5m/s so that they finish the race between a minute-40 seconds ish\
+\pard\tx1080\tx1800\pardeftab720\li1800\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls10\ilvl1\cf2 -	Essentially user needs to finish in under 40 seconds to win\
+\pard\tx360\tx1080\pardeftab720\li1080\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls10\ilvl0\cf2 -	Only 4 jumps, user needs to click space bar between 0.7-0.5 seconds before the jump (calculated based on user speed)\
+\pard\tx1080\tx1800\pardeftab720\li1800\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls10\ilvl1\cf2 -	User speed stays the same during jump for simplicity\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\ls10\ilvl0\cf2 \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\ls10\ilvl0
+\f2\i \cf2 Level 2\
+\pard\tx360\tx1080\pardeftab720\li1080\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls11\ilvl0
+\f1\i0 \cf2 -	Opponents are camel. Shown below\
+-	Pool of opponent names: Dessert, Humpy, Dehydrated, Lawrence, Mohammad\
+-	camel run between 5-7 m/s so that they finish between 40-28 ish seconds\
+\pard\tx1080\tx1800\pardeftab720\li1800\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls11\ilvl1\cf2 -	Essentially user needs to finish in under 28 seconds to win\
+\pard\tx360\tx1080\pardeftab720\li1080\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls11\ilvl0\cf2 -	6 jumps, user needs to click space bar between 0.7-0.5 seconds before the jump (calculated based on user speed)\
+\pard\tx1080\tx1800\pardeftab720\li1800\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls11\ilvl1\cf2 -	User speed stays the same during jump for simplicity\
+\pard\tx360\tx1080\pardeftab720\li1080\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls11\ilvl0\cf2 -	\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\ls11\ilvl0\cf2 \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\ls11\ilvl0
+\f2\i \cf2 Level 3\
+\pard\tx360\tx1080\pardeftab720\li1080\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls12\ilvl0
+\f1\i0 \cf2 -	Opponents are zebra. Shown below\
+-	Pool of opponent names: Cookie, Miss Zebra, Savannah, Speedy, Jordan\
+-	zebra run between 9-10 m/s so that they finish in around 20 seconds\
+\pard\tx1080\tx1800\pardeftab720\li1800\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls12\ilvl1\cf2 -	User needs to finish in under 20 seconds to win\
+\pard\tx360\tx1080\pardeftab720\li1080\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls12\ilvl0\cf2 -	8 jumps, user needs to click space bar between 0.7-0.5 seconds before the jump (calculated based on user speed)\
+\pard\tx1080\tx1800\pardeftab720\li1800\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls12\ilvl1\cf2 -	User speed stays the same during jump for simplicity\
+\pard\tx360\tx1080\pardeftab720\li1080\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls12\ilvl0\cf2 -	\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\ls12\ilvl0\cf2 \
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\ls12\ilvl0
+\f2\i \cf2 Level 4 - Final Level - cheetah\
+\pard\tx360\tx1080\pardeftab720\li1080\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls13\ilvl0
+\f1\i0 \cf2 -	Opponent is a single demon horse (have user in lane 4 and demon in lane 3 with other lanes empty). Visual shown below\
+-	Opponent Names: Dash, \
+-	Demon horse runs at 17-20m/s so that the user needs to finish in under 10 seconds to win\
+-	12 jumps, user needs to click space bar between 0.7-0.5 seconds before the jump (calculated based on user speed)\
+\pard\tx1080\tx1800\pardeftab720\li1800\fi-360\ri0\sl276\slmult1\partightenfactor0
+\ls13\ilvl1\cf2 -	User speed stays the same during jump for simplicity\
+\pard\pardeftab720\ri0\sl276\slmult1\partightenfactor0
+\ls13\ilvl0\cf2 \
+\
+\
+\
+Finished Sprites\
+\
+ \
+\
+}
