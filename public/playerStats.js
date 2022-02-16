@@ -1,5 +1,6 @@
 let playerStats = {
-  highestLevel : null,
+  highestLevelName : null,
+  highestLevelNumber: null,
   fastestTime : null,
   playerName : null,
 
@@ -24,14 +25,24 @@ let playerStats = {
       return playerStats.fastestTime;
     },
 
-    setHighestLevel : function (newHigh)
+    setHighestLevelName : function (name)
     {
-      playerStats.highestLevel = newHigh;
+      playerStats.highestLevelName = name;
     },
 
-    getHighestLevel : function ()
+    getHighestLevelName : function ()
     {
-      return playerStats.highestLevel;
+      return playerStats.highestLevelName;
+    },
+
+    setHighestLevelNumber : function (newHighNum)
+    {
+      playerStats.highestLevelNumber = newHighNum;
+    },
+
+    getHighestLevelNumber : function ()
+    {
+      return playerStats.highestLevelNumber;
     }
   }
 }
