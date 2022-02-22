@@ -1,19 +1,24 @@
 class UI {
+
+
+
+
   constructor() {
+
+    document.body.style.backgroundImage = "url('Stage Screens/TitleCard.png')";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundSize = "cover";
+
     this.currentLevel = 0;
     this.levelOne = new Level(1);
     this.levelTwo = new Level(2);
     this.levelThree = new Level(3);
     this.levelFour = new Level(4);
     this.levelFive = new Level(5);
-    currentLevel = levelOne;
-
-    document.body.style.backgroundImage = "url('TitleCard.png')";
-    document.body.style.backgroundRepeat = "no-repeat";
-    document.body.style.backgroundSize = "cover";
+    this.currentLevel = this.levelOne;
 
     setTimeout(() => {
-      initializeAnimation();
+      this.initializeAnimation();
     }, 1500);
   }
 
@@ -30,16 +35,30 @@ class UI {
 
     ctx.save();
     ctx.lineWidth = 6;
-    ctx.translate(500, 1000);
-    currentLevel.runGame(ctx);
+    this.currentLevel.display(ctx);
     ctx.restore();
 
-    window.requestAnimationFrame(draw);
+    window.requestAnimationFrame(this.draw);
   }
 
   initializeAnimation() {
-    window.requestAnimationFrame(draw);
+    window.requestAnimationFrame(this.draw);
   }
 
 
 }
+class Level
+{
+  //Global integer refreshTime;
+  //let obstacles[];
+  //let horsePerLanes[];
+  //let backgroundTexture = "url('Track Background.png');
+  //let levelNumber;
+
+  constructor(levelNumber)
+  {
+    this.levelNumber = levelNumber;
+
+  }
+}
+const ui = new UI ();
