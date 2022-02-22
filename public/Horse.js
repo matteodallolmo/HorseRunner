@@ -10,13 +10,13 @@ class Horse{
     this.acceleration = 0; // acceleration of the horse
     this.spriteSheet=sprite; // sprite sheet of the horse, animate by css
   }
-  function movement(time){//move expected amount of space over the refresh time
+  movement(time){//move expected amount of space over the refresh time
   //run every frame when enabled
   //time is a temporary variable that we might have to change
   //time represents the time between each frame
     position = position+velocity*(time)+acceleration/2*(time^2);
   }
-  function genVelocity(time){
+  genVelocity(time){
   //time is a temporary variable that we might have to change
   //time represents the time between each frame
     velocity = velocity+acceleration*(time);
@@ -31,7 +31,7 @@ class Horse{
     setTimeout(()=>{recentlyJumped=false},500);
     //someone has to figure out the animation here.
   }
-  function animate(velocity){
+  animate(velocity){
     //sets animation-duration of sprite(css) to 6*Velocity, animation-timing-function to steps(6). Used every frame.
     //someone else needs to complete this.
   }
