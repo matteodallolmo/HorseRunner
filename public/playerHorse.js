@@ -19,7 +19,8 @@ class playerHorse extends Horse
       }
       else
       {
-        //set acceleration to zero once ethan finishes horse class
+        acceleration = 0;
+        velocity -= 1;
       }
     }
     if(pressedKey == 32)//32 is keycode for spacebar
@@ -30,8 +31,7 @@ class playerHorse extends Horse
 
   updateAccel()
   {
-    // this function is called every frame, and updates acceleration
-    //acceleration = accelToAdd + acceleration
-    //set accelToAdd to zero
+    acceleration = acceleration+accelToAdd;
+    accelToAdd = 0;
   }
 }
