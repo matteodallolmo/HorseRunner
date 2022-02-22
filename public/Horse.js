@@ -21,7 +21,7 @@ class Horse{
   //time represents the time between each frame
     velocity = velocity+acceleration*(time);
   }
-  function jump(){
+  jump(){
     if (recentlyJumped == true) {
       return
     }
