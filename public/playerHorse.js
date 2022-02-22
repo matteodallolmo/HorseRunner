@@ -1,6 +1,7 @@
 class playerHorse extends Horse
 {
   constructor() {
+    super();
     let accelToAdd = 0;
     let prevKey = 0;
     let currentKey = 0;
