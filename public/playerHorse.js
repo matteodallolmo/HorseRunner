@@ -1,10 +1,10 @@
 class playerHorse extends Horse
-{
+{  
   constructor() {
     super();
-    let accelToAdd = 0;
-    let prevKey = 0;
-    let currentKey = 0;
+    this.accelToAdd = 0;
+    this.prevKey = 0;
+    this.currentKey = 0;
   }
 
   //this takes in a INT that represents the key
