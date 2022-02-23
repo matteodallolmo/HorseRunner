@@ -10,7 +10,7 @@ class UI {
     document.body.style.backgroundSize = "cover";
 
     this.levelNum = 1;
-    this.currentLevel = new Level(levelNum);
+    this.currentLevel = new Level(this.levelNum);
 
     setTimeout(() => {
       this.initializeAnimation();
@@ -70,7 +70,7 @@ class Level {
   constructor(levelNumber) {
     this.obstacles = [2000];
     this.levelNumber = levelNumber;
-    this.player = new playerHorse([left, right], "space");
+    this.player = new PlayerHorse([left, right], "space");
   }
 
   checkGameState() {
