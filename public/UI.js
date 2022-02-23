@@ -19,18 +19,24 @@ class UI {
     this.gameStillPlaying = true;
     this.finished = false;
     this.collided = false;
-    while (this.gameStillPlaying)
-    {
-      if (checkGameState()==1)
-      {
+    while (this.gameStillPlaying) {
+      if (checkGameState() == 1) {
         this.collided = true;
         this.currentLevel.handleCollision();
-      }
-      else if (checkGameState() ==2)
-      {
+      } else if (checkGameState() == 2) {
         this.finished = true;
-        this.levelNum++;
-        this.currentLevel = new Level (levelNum);
+        if (this.currentLevel.wonOrLost()==1)
+        {
+          this.levelNum++;
+          this.currentLevel = new Level(levelNum);
+          this.currentLevel.win();
+        }
+        else {
+          this.gameStillPlaying= false;
+          this.currentLevel.lose();
+          this();
+        }
+
       }
     }
   }
@@ -60,31 +66,25 @@ class UI {
 
 
 }
-class Level
-{
-  constructor(levelNumber)
-  {
+class Level {
+  constructor(levelNumber) {
     this.obstacles = [2000];
     this.levelNumber = levelNumber;
-    this.player = new playerHorse ([left, right], "space");
+    this.player = new playerHorse([left, right], "space");
   }
 
-  checkGameState ()
-  {
+  checkGameState() {
     let playerPos = this.player.position;
-    if (this.player.isJumping)
-    {
-      if (obstacles[playerPos == true)
-        {
+    if (this.player.isJumping) {
+      if (obstacles[playerPos] == true) {
           return 1;
         }
-    }
-    if (playerPos == 2000)
-    {
-      return 2;
-    }
-    return 0;
+      }
+      if (playerPos == 2000) {
+        return 2;
+      }
+      return 0;
 
+    }
   }
-}
-const ui = new UI ();
+  const ui = new UI();
