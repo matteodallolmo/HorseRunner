@@ -9,17 +9,30 @@ class UI {
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "cover";
 
-    this.currentLevel = 0;
-    this.levelOne = new Level(1);
-    this.levelTwo = new Level(2);
-    this.levelThree = new Level(3);
-    this.levelFour = new Level(4);
-    this.levelFive = new Level(5);
-    this.currentLevel = this.levelOne;
+    this.levelNum = 1;
+    this.currentLevel = new Level(levelNum);
 
     setTimeout(() => {
       this.initializeAnimation();
     }, 1500);
+
+    this.gameStillPlaying = true;
+    this.finished = false;
+    this.collided = false;
+    while (this.gameStillPlaying)
+    {
+      if (checkGameState()==1)
+      {
+        this.collided = true;
+        this.currentLevel.handleCollision();
+      }
+      else if (checkGameState() ==2)
+      {
+        this.finished = true;
+        this.levelNum++;
+        this.currentLevel = new Level (levelNum);
+      }
+    }
   }
 
 
@@ -27,7 +40,7 @@ class UI {
     var ctx = document.getElementById('game').getContext('2d');
 
     ctx.globalCompositeOperation = 'source-over';
-    ctx.clearRect(0, 0, 500, 1000); // clear canvas
+    ctx.clearRect(0, 0, 1000, 1900); // clear canvas
 
     // Figure out what pen we wanna draw with
     ctx.fillStyle = 'rgba(0, 153, 255, 1)';
@@ -49,15 +62,28 @@ class UI {
 }
 class Level
 {
-  //Global integer refreshTime;
-  //let obstacles[];
-  //let horsePerLanes[];
-  //let backgroundTexture = "url('Track Background.png');
-  //let levelNumber;
-
   constructor(levelNumber)
   {
+    this.obstacles = [2000];
     this.levelNumber = levelNumber;
+    this.player = new playerHorse ([left, right], "space");
+  }
+
+  checkGameState ()
+  {
+    let playerPos = this.player.position;
+    if (this.player.isJumping)
+    {
+      if (obstacles[playerPos == true)
+        {
+          return 1;
+        }
+    }
+    if (playerPos == 2000)
+    {
+      return 2;
+    }
+    return 0;
 
   }
 }
