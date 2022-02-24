@@ -2,52 +2,64 @@ class roboHorse extends Horse{
 
   constructor (levelNum)
   {
+    super();
+    this.level = levelNum;
     this.isJumping = true;
     let possibleNames = [];
-    let maxRoboHorseVelocities = [10, 20, 30, 70];
-    let name = null;
+    this.maxRoboHorseVelocities = [10,20,30,70];
     this.velocity = 0;
-    generateName();
-    createRoboHorseImage(levelNum);
-    for (let i = 0; i < 4; i++)
+    this.acceleration = 0;
+    if (levelNum == 1)
     {
-        let nameList = [];
-        if (i == 0)
-        {
-          nameList = ["Rafael", "Donnatello", "Leonardo", "Shelly", "Mr. Green", "Tuck", "Franklin", "Michaelangelo"];
-        }
-        if (i == 1)
-        {
-          nameList = ["Dessert", "Humpy", "Dehydrated", "Lawrence", "Mohammad"];
-        }
-        if (i == 2)
-        {
-          nameList = ["Cookie", "Miss Zebra", "Savannah", "Speedy", "Jordan"];
-        }
-        if (i == 3)
-        {
-          nameList = ["Dash"];
-        }
-        possibleNames[i] = nameList;
+        this.possibleNames = ["Rafael", "Donnatello", "Leonardo", "Shelly", "Mr. Green", "Tuck", "Franklin", "Michaelangelo"];
     }
-  }
-  updateAcceleration(levelNum)
-  {
-    if (this.velocity < this.maxRoboHorseVelocities[levelNum-1])
+    else if (levelNum == 2)
     {
-        this.acceleration = Math.floor(Math.random() * .08)+.02;
+        this.possibleNames = ["Dessert", "Humpy", "Dehydrated", "Lawrence", "Mohammad"];
     }
+    else if (levelNum == 3)
+    {
+        this.possibleNames = ["Cookie", "Miss Zebra", "Savannah", "Speedy", "Jordan"];
+    }
+    else
+    {
+        this.possibleNames = ["Dash"];
+    }
+    let name = this.generateName();
   }
-  generateName (levelNum)
+
+  getRandomInt(min, max)
   {
-       if (levelNum == 4)
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+  }
+
+  generateName ()
+  {
+       if (this.level == 4)
        {
-         name = "Dash";
+         return "Dash";
        }
        else
        {
-         let randNum = Math.floor(Math.random() * possibleNames[levelNum-1].length);
-         name = possibleNames[levelNum-1][randNum];
+         let numOfNames = this.possibleNames.length;
+         let randNum = this.getRandomInt (0, numOfNames);
+         return this.possibleNames[randNum];
        }
+  }
+
+  updateAcceleration()
+  {
+    this.maxVelo = this.maxRoboHorseVelocities [this.level-1];
+    if (this.velocity < this.maxVelo)
+    {
+        this.acceleration += Math.random() * .08 +.02;
+        console.log ("New Acceleration is " + this.acceleration);
+    }
+    else
+    {
+        console.log ("max velo already reached");
+    }
   }
 }
