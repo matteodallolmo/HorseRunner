@@ -67,7 +67,7 @@ class Level {
   constructor(levelNumber) {
     this.obstacles = [2000];
     this.levelNumber = levelNumber;
-    this.player = new PlayerHorse([left, right], "space");
+    this.player = new PlayerHorse(1, 1);//temp constructor variables
   }
 
   checkGameState() {
