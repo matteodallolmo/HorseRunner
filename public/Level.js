@@ -1,8 +1,5 @@
 
-class Horse {}
-class PlayerHorse{}
-class RoboHorse{}
-class PlayerStats{}
+
 
 class Level {
   constructor(levelNumber) {

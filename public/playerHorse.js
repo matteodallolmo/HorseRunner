@@ -1,4 +1,4 @@
-class Horse{}
+
 
 class PlayerHorse extends Horse
 {

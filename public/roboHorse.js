@@ -1,5 +1,5 @@
 
-class Horse{}
+
 
 class RoboHorse extends Horse{
 
