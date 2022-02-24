@@ -1,5 +1,4 @@
-
-class UI {
+class UI{
   constructor() {
 
     this.backgroundImage = "url('Stage Screens/TitleCard.png')";
@@ -65,5 +64,11 @@ class UI {
 
 
 }
+class Level {
+  constructor(levelNumber) {
+    this.obstacles = [2000];
+    this.levelNumber = levelNumber;
+    this.player = new PlayerHorse(1, 1);//temp constructor variables
+  }
 
   const ui = new UI();

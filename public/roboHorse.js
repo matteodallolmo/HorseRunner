@@ -1,4 +1,4 @@
-class roboHorse extends Horse{
+class RoboHorse extends Horse{
 
   constructor (levelNum)
   {
