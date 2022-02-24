@@ -1,4 +1,4 @@
-let playerStats = {
+let PlayerStats = {
   highestLevelName : null,
   highestLevelNumber: null,
   fastestTime : null,
@@ -7,42 +7,42 @@ let playerStats = {
   functions: {
     setName : function(name)
     {
-      playerStats.playerName = name;
+      PlayerStats.playerName = name;
     },
 
     getName: function ()
     {
-      return playerStats.playerName;
+      return PlayerStats.playerName;
     },
 
     setFastestTime : function (time)
     {
-      playerStats.fastestTime = time;
+      PlayerStats.fastestTime = time;
     },
 
     getFastestTime : function ()
     {
-      return playerStats.fastestTime;
+      return PlayerStats.fastestTime;
     },
 
     setHighestLevelName : function (name)
     {
-      playerStats.highestLevelName = name;
+      PlayerStats.highestLevelName = name;
     },
 
     getHighestLevelName : function ()
     {
-      return playerStats.highestLevelName;
+      return PlayerStats.highestLevelName;
     },
 
     setHighestLevelNumber : function (newHighNum)
     {
-      playerStats.highestLevelNumber = newHighNum;
+      PlayerStats.highestLevelNumber = newHighNum;
     },
 
     getHighestLevelNumber : function ()
     {
-      return playerStats.highestLevelNumber;
+      return PlayerStats.highestLevelNumber;
     }
   }
 }

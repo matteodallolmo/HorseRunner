@@ -1,4 +1,4 @@
-class playerHorse extends Horse
+class PlayerHorse extends Horse
 {
   constructor() {
     super();

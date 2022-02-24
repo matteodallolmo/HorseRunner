@@ -1,8 +1,5 @@
 class UI {
 
-
-
-
   constructor() {
 
     document.body.style.backgroundImage = "url('Stage Screens/TitleCard.png')";
