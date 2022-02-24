@@ -14,21 +14,21 @@ class Horse{
   //run every frame when enabled
   //time is a temporary variable that we might have to change
   //time represents the time between each frame
-    position = position+velocity*(time)+acceleration/2*(time^2);
+    this.position = this.position+this.velocity*(time)+this.acceleration/2*(time^2);
   }
   genVelocity(time){
   //time is a temporary variable that we might have to change
   //time represents the time between each frame
-    velocity = velocity+acceleration*(time);
+    this.velocity = this.velocity+this.acceleration*(time);
   }
   jump(){
-    if (recentlyJumped == true) {
+    if (this.recentlyJumped == true) {
       return
     }
-    isJumping=true;
-    recentlyJumped=true;
-    setTimeout(()=>{isJumping=false},1000);
-    setTimeout(()=>{recentlyJumped=false},500);
+    this.isJumping=true;
+    this.recentlyJumped=true;
+    setTimeout(()=>{this.isJumping=false},1000);
+    setTimeout(()=>{this.recentlyJumped=false},500);
     //someone has to figure out the animation here.
   }
   animate(velocity){
