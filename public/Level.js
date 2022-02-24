@@ -1,8 +1,8 @@
-class Level;
-class Horse;
-class PlayerHorse;
-class RoboHorse;
-class UI;
+
+class Horse {}
+class PlayerHorse{}
+class RoboHorse{}
+class PlayerStats{}
 
 class Level {
   constructor(levelNumber) {

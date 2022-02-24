@@ -1,3 +1,5 @@
+class Horse{}
+
 class PlayerHorse extends Horse
 {
   constructor(lanePos, sprite) {

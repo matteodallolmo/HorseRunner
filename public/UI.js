@@ -1,3 +1,5 @@
+class Level{}
+
 class UI{
   constructor() {
 
@@ -18,7 +20,7 @@ class UI{
     this.finished = false;
     this.collided = false;
     while (this.gameStillPlaying) {
-      if (checkGameState() == 1) {
+      if (this.currentLevel.checkGameState() == 1) {
         this.collided = true;
         this.currentLevel.handleCollision();
       } else if (checkGameState() == 2) {

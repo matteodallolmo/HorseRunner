@@ -1,3 +1,6 @@
+
+class Horse{}
+
 class RoboHorse extends Horse{
 
   constructor (levelNum)
