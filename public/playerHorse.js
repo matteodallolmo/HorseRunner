@@ -1,5 +1,5 @@
 class playerHorse extends Horse
-{  
+{
   constructor() {
     super();
     this.accelToAdd = 0;
@@ -11,17 +11,18 @@ class playerHorse extends Horse
   //37 = leftArrow, 39 = rightArrow
   keyPressed(pressedKey)
   {
-    if(pressedKey == 37 || pressedKey == 39)
+    this.currentKey = pressedKey;
+    if(this.currentKey == 37 || this.currentKey == 39)
     {
-      if(pressedKey != prevKey)
+      if(this.currentKey != this.prevKey)
       {
-        accelToAdd += 0.05;
-        prevKey == currentKey;
+        this.accelToAdd += 0.05;
+        this.prevKey = this.currentKey;
       }
       else
       {
-        acceleration = 0;
-        velocity -= 1;
+        this.acceleration = 0;
+        this.velocity -= 1;
       }
     }
     if(pressedKey == 32)//32 is keycode for spacebar
@@ -32,7 +33,7 @@ class playerHorse extends Horse
 
   updateAccel()
   {
-    acceleration = acceleration+accelToAdd;
-    accelToAdd = 0;
+    this.acceleration = this.acceleration+this.accelToAdd;
+    this.accelToAdd = 0;
   }
 }
