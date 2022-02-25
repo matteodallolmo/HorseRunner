@@ -1,3 +1,4 @@
+
 class Horse{
   constructor(lanePos,sprite){
     this.position = 0;
