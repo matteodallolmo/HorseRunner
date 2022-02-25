@@ -54,14 +54,20 @@ class UI{
 
     ctx.save();
     ctx.lineWidth = 6;
-    this.currentLevel.display(ctx);
+    //this.currentLevel.display(ctx);
+    /*
+    There is no display method in the level class
+    */
     ctx.restore();
 
-    window.requestAnimationFrame(this.draw);
+    //window.requestAnimationFrame(this.draw());
+    /*
+    The line above creates an infinite loop
+    */
   }
 
   initializeAnimation() {
-    window.requestAnimationFrame(this.draw);
+    window.requestAnimationFrame(this.draw());
   }
 
 
