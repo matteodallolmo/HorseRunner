@@ -1,10 +1,12 @@
-class UI {
 
+class UI{
   constructor() {
 
-    document.body.style.backgroundImage = "url('Stage Screens/TitleCard.png')";
-    document.body.style.backgroundRepeat = "no-repeat";
-    document.body.style.backgroundSize = "cover";
+    this.backgroundImage = "url('Stage Screens/TitleCard.png')";
+    var canvas = document.getElementById("game");
+    canvas.style.backgroundImage= this.backgroundImage;
+    canvas.style.backgroundRepeat = "no-repeat";
+    canvas.style.backgroundSize = "cover";
 
     this.levelNum = 1;
     this.currentLevel = new Level(this.levelNum);
@@ -17,10 +19,11 @@ class UI {
     this.finished = false;
     this.collided = false;
     while (this.gameStillPlaying) {
-      if (checkGameState() == 1) {
+      this.gameStillPlaying = false;
+      if (this.currentLevel.checkGameState() == 1) {
         this.collided = true;
         this.currentLevel.handleCollision();
-      } else if (checkGameState() == 2) {
+      } else if (this.currentLevel.checkGameState() == 2) {
         this.finished = true;
         if (this.currentLevel.wonOrLost()==1)
         {
@@ -63,25 +66,5 @@ class UI {
 
 
 }
-class Level {
-  constructor(levelNumber) {
-    this.obstacles = [2000];
-    this.levelNumber = levelNumber;
-    this.player = new PlayerHorse(1, 1);//temp constructor variables
-  }
 
-  checkGameState() {
-    let playerPos = this.player.position;
-    if (this.player.isJumping) {
-      if (obstacles[playerPos] == true) {
-          return 1;
-        }
-      }
-      if (playerPos == 2000) {
-        return 2;
-      }
-      return 0;
-
-    }
-  }
   const ui = new UI();
