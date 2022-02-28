@@ -19,7 +19,7 @@ class RoboHorse extends Horse{
     }
     else if (levelNum == 2)
     {
-        this.possibleNames = ["Dessert", "Humpy", "Dehydrated", "Lawrence", "Mohammad"];
+        this.possibleNames = ["Desert", "Humpy", "Dehydrated", "Lawrence", "Mohammad"];
     }
     else if (levelNum == 3)
     {
@@ -38,7 +38,6 @@ class RoboHorse extends Horse{
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
   }
-
   generateName ()
   {
        if (this.level == 4)
@@ -52,7 +51,6 @@ class RoboHorse extends Horse{
          return this.possibleNames[randNum];
        }
   }
-
   updateAcceleration()
   {
     this.maxVelo = this.maxRoboHorseVelocities [this.level-1];
