@@ -3,9 +3,10 @@
 
 class RoboHorse extends Horse{
 
-  constructor (levelNum)
+  constructor (lanePos, levelNum)
   {
-    super();
+    super(lanePos, levelNum);
+    this.lanePosition = lanePos;
     this.level = levelNum;
     this.isJumping = true;
     let possibleNames = [];
