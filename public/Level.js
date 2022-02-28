@@ -6,10 +6,10 @@ class Level {
     this.levelNum = levelNumber;
     this.refreshTime = 60; //fps
     this.obstaclesArray = [];
-    this.horsesArray = [];
+    this.horseArray = [];
     this.obstacleIndexes = [];
     this.backgroundImage = new Image();// Create new img element
-    this.img.src = 'CompleteTrack.png'; // Set source path
+    this.backgroundImage.src = 'CompleteTrack.png'; // Set source path
     this.timer = null;
     this.obstacles = [];
     this.obstacles.length = 20000;
@@ -65,8 +65,28 @@ class Level {
       this.obstacleIndexes[k] = num;
     }
   }
+
+  populateHorseArray ()
+  {
+    this.userSprite = new Image();// Create new img element
+    this.userSprite.src = 'horseSprite.png';
+    if (this.levelNum == 4)
+    {
+      this.computerSprite = new Image();
+      this.computerSprite.src = 'cheetahSprite.png';
+      PlayerHorse user = new PlayerHorse(5,userSprite);
+      RoboHorse cpu = new RoboHorse (4, computerSprite);
+      horseArray = [0,0,0,0,cpu,user];
+    }
+    else if (this.levelNum == 3)
+    {
+      
+    }
+  }
+
   playGame()
   {
+    populateObstaclesArray ();
 
   }
 
