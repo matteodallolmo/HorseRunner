@@ -41,7 +41,7 @@ class UI{
     }
   }
 
-
+/**
   draw() {
     var ctx = document.getElementById('game').getContext('2d');
 
@@ -64,7 +64,7 @@ class UI{
     window.requestAnimationFrame(this.draw);
   }
 
-
+*/
 }
 
-  const ui = new UI();
+  //const ui = new UI();

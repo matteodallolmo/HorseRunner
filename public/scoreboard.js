@@ -5,14 +5,15 @@ class Scoreboard {
       this.highestLevel = "Larry's House"; //PlayerStats.getHighestLevel();
       this.fastestTime = "11:30";//PlayerStats.getFastestTime();
       this.playerName = "zane"; //PlayerStats.getName();
-      //document.body.style.backgroundImage = "url('Stage Screens/scoreboard.png')";
-      //document.body.style.backgroundRepeat = "no-repeat";
-      //document.body.style.backgroundSize = "cover";
+
       this.background = new Image();
       this.background.src = "./Stage Screens/scoreboard.png";
+
+      this.afterRace = new Image();
+      this.afterRace.src = "./Stage Screens/AfterRace.svg";
     }
 
-    draw() {
+    drawAfterLoss() {
       var canvas = document.getElementById("game");
       var ctx = canvas.getContext("2d");
       this.background.onload = () => {
@@ -26,7 +27,16 @@ class Scoreboard {
         ctx.fillText(this.highestLevel, 575, 290);
       }
     }
+
+    drawAfterRace() {
+      var canvas = document.getElementById("game");
+      var ctx = canvas.getContext("2d");
+      this.afterRace.onload = () => {
+        ctx.drawImage(this.afterRace,0,0,canvas.width,canvas.height);
+      }
+    }
 }
 
 const scoreboard = new Scoreboard();
-scoreboard.draw();
+//scoreboard.drawAfterLoss();
+scoreboard.drawAfterRace();
