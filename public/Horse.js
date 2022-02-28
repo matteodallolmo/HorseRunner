@@ -49,7 +49,7 @@ class Horse {
     ctx.drawImage(this.img, this.spriteDims.startXPos+(this.spriteDims.width+this.spriteDims.distanceBetween)*frameNum, this.spriteDims.startYPos, this.spriteDims.width, this.spriteDims.height, canvasX, this.lanePosition, this.spriteDims.width*this.spriteDims.scale, this.spriteDims.height*this.spriteDims.scale);
   }
 
-  animate(velocity)
+  animate()
     {
     let canvas = document.querySelector('canvas');
     let ctx = canvas.getContext('2d');
