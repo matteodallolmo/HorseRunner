@@ -1,20 +1,44 @@
-class UI {
-  constructor() {
-    this.currentLevel = 0;
-    this.levelOne = new Level(1);
-    this.levelTwo = new Level(2);
-    this.levelThree = new Level(3);
-    this.levelFour = new Level(4);
-    this.levelFive = new Level(5);
-    currentLevel = levelOne;
 
-    document.body.style.backgroundImage = "url('TitleCard.png')";
-    document.body.style.backgroundRepeat = "no-repeat";
-    document.body.style.backgroundSize = "cover";
+class UI{
+  constructor() {
+
+    this.backgroundImage = "url('Stage Screens/TitleCard.png')";
+    var canvas = document.getElementById("game");
+    canvas.style.backgroundImage= this.backgroundImage;
+    canvas.style.backgroundRepeat = "no-repeat";
+    canvas.style.backgroundSize = "cover";
+
+    this.levelNum = 1;
+    this.currentLevel = new Level(this.levelNum);
 
     setTimeout(() => {
-      initializeAnimation();
+      this.initializeAnimation();
     }, 1500);
+
+    this.gameStillPlaying = true;
+    this.finished = false;
+    this.collided = false;
+    while (this.gameStillPlaying) {
+      this.gameStillPlaying = false;
+      if (this.currentLevel.checkGameState() == 1) {
+        this.collided = true;
+        this.currentLevel.handleCollision();
+      } else if (this.currentLevel.checkGameState() == 2) {
+        this.finished = true;
+        if (this.currentLevel.wonOrLost()==1)
+        {
+          this.levelNum++;
+          this.currentLevel = new Level(levelNum);
+          this.currentLevel.win();
+        }
+        else {
+          this.gameStillPlaying= false;
+          this.currentLevel.lose();
+          this();
+        }
+
+      }
+    }
   }
 
 
@@ -22,7 +46,7 @@ class UI {
     var ctx = document.getElementById('game').getContext('2d');
 
     ctx.globalCompositeOperation = 'source-over';
-    ctx.clearRect(0, 0, 500, 1000); // clear canvas
+    ctx.clearRect(0, 0, 1000, 1900); // clear canvas
 
     // Figure out what pen we wanna draw with
     ctx.fillStyle = 'rgba(0, 153, 255, 1)';
@@ -30,16 +54,17 @@ class UI {
 
     ctx.save();
     ctx.lineWidth = 6;
-    ctx.translate(500, 1000);
-    currentLevel.runGame(ctx);
+    this.currentLevel.display(ctx);
     ctx.restore();
 
-    window.requestAnimationFrame(draw);
+    window.requestAnimationFrame(this.draw);
   }
 
   initializeAnimation() {
-    window.requestAnimationFrame(draw);
+    window.requestAnimationFrame(this.draw);
   }
 
 
 }
+
+  const ui = new UI();
