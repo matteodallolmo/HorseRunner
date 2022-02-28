@@ -11,8 +11,6 @@ class Horse{
 
     this.position = 0;
     this.lanePosition = lanePos;//the verticle position of the Horse when not jumping
-    this.spriteLength = 197; //width of sprite
-    this.spriteHeight = 158; //length of sprite
     this.recentlyJumped = false; // determines jumping cooldown to make jump less spammable
     this.isJumping = false; // stores whether the horse is jumping
     this.velocity = 0; // velocity of the horse
@@ -57,7 +55,7 @@ class Horse{
     ctx.drawImage(this.img, startXPos+(width+30)*frameNum, startYPos, width, height, canvasX, this.lanePosition, width*scale, height*scale);
   }
 
-  animate(keyFrame, velocity, spriteSize)
+  animate(velocity)
     {
     let canvas = document.querySelector('canvas');
     let ctx = canvas.getContext('2d');
@@ -70,11 +68,11 @@ class Horse{
     if (this.currentLoopIndex >= this.cycleLoop.length) {
         this.currentLoopIndex = 0;
     }
-    requestAnimationFrame(this.animate);
+    window.requestAnimationFrame(this.animate.bind(this));
   }
 
   initializeAnimation() {
-    requestAnimationFrame(this.animate);
+    window.requestAnimationFrame(this.animate.bind(this));
   }
 
 }
