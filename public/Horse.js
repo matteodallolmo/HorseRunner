@@ -1,5 +1,5 @@
 
-class Horse{
+class Horse {
   constructor(lanePos,levelNum)//level 0 for PlayerHorse
   {
     this.spriteArray = [
@@ -18,6 +18,7 @@ class Horse{
     this.spriteSheet = this.spriteArray[levelNum]; // sprite sheet of the horse, animate by css
     this.img = new Image();
     this.img.src = this.spriteSheet;
+    this.spriteDims = new SpriteDimensions(levelNum);
 
     this.cycleLoop = [0, 1, 2, 3, 4, 5];
     this.currentLoopIndex = 0;
@@ -46,13 +47,7 @@ class Horse{
 
   drawFrame(canvas, ctx, frameNum, canvasX)
   {
-    const scale = 1;
-    const width = 164;
-    const height = 93;
-    const startXPos = 38;
-    const startYPos = 24;
-
-    ctx.drawImage(this.img, startXPos+(width+30)*frameNum, startYPos, width, height, canvasX, this.lanePosition, width*scale, height*scale);
+    ctx.drawImage(this.img, this.spriteDims.startXPos+(this.spriteDims.width+this.spriteDims.distanceBetween)*frameNum, this.spriteDims.startYPos, this.spriteDims.width, this.spriteDims.height, canvasX, this.lanePosition, this.spriteDims.width*this.spriteDims.scale, this.spriteDims.height*this.spriteDims.scale);
   }
 
   animate(velocity)
@@ -61,7 +56,7 @@ class Horse{
     let ctx = canvas.getContext('2d');
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    this.drawFrame(canvas, ctx, this.cycleLoop[this.currentLoopIndex], 0);
+    this.drawFrame(canvas, ctx, this.cycleLoop[this.currentLoopIndex], this.position);
 
     this.currentLoopIndex++;
 
@@ -73,6 +68,27 @@ class Horse{
 
   initializeAnimation() {
     window.requestAnimationFrame(this.animate.bind(this));
+  }
+
+}
+
+class SpirteDimensions {
+  constructor(levelNum) {
+    this.levelNum = levelNum;
+
+    this.widthArr = [164, 177, 170, 44, 41]
+    this.heightArr = [93, 111, 97, 39, 27]
+    this.distanceBetweenArr = [30, 91, 21, 6, 5]
+    this.startXArr = [38, 32, 32, 5, 4]
+    this.startYArr = [24, 38, 36, 9, 5]
+    this.scaleArr = [1, 1, 1, 1, 2, 2]
+
+    this.width = this.widthArr[this.levelNum]
+    this.height = this.widthArr[this.levelNum]
+    this.distanceBetween = this.widthArr[this.levelNum]
+    this.startXPos = this.widthArr[this.levelNum]
+    this.startYPos = this.widthArr[this.levelNum]
+    this.scale = this.scaleArr[this.levelNum]
   }
 
 }
