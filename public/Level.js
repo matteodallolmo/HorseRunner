@@ -70,24 +70,58 @@ class Level {
   {
     this.userSprite = new Image();// Create new img element
     this.userSprite.src = 'horseSprite.png';
+    this.computerSprite = new Image();
+    PlayerHorse user = new PlayerHorse(5,userSprite);
     if (this.levelNum == 4)
     {
-      this.computerSprite = new Image();
       this.computerSprite.src = 'cheetahSprite.png';
-      PlayerHorse user = new PlayerHorse(5,userSprite);
       RoboHorse cpu = new RoboHorse (4, computerSprite);
       horseArray = [0,0,0,0,cpu,user];
     }
-    else if (this.levelNum == 3)
+    else
     {
-      
+      if (this.levelNum == 3)
+      {
+        this.computerSprite.src = 'zebraSprite.png';
+      }
+      else if (this.levelNum == 2)
+      {
+        this.computerSprite.src = 'camelSprite.png';
+      }
+      else
+      {
+        this.computerSprite.src = 'turtleSprite';
+      }
+      RoboHorse cpu1 = new RoboHorse (0, computerSprite);
+      RoboHorse cpu2 = new RoboHorse (1, computerSprite);
+      RoboHorse cpu3 = new RoboHorse (2, computerSprite);
+      RoboHorse cpu4 = new RoboHorse (3, computerSprite);
+      RoboHorse cpu5 = new RoboHorse (4, computerSprite);
+      horseArray = [cpu1, cpu2, cpu3, cpu4, cpu5, user];
     }
   }
 
   playGame()
   {
     populateObstaclesArray ();
-
+    populateHorseArray ();
+    var canvas = document.getElementById("game");
+    canvas.style.backgroundImage= this.backgroundImage;
+    canvas.style.backgroundRepeat = "no-repeat";
+    canvas.style.backgroundSize = "cover";
+    while (!isFinished())
+    {
+      let result = checkGameState();
+      if (result == 1)
+      {
+        console.log ("collision"); // needs to have an actual affect on horse at some point
+      }
+      else if (result == 2)
+      {
+        console.log ("end of race");
+        break; // probably need to queue the scoreboard
+      }
+    }
   }
 
   checkGameState() {
