@@ -2,8 +2,8 @@
 
 class PlayerHorse extends Horse
 {
-  constructor(lanePos, sprite) {
-    super(lanePos, sprite);
+  constructor(lanePos, levelNum) {
+    super(lanePos, levelNum);
     this.accelToAdd = 0;
     this.prevKey = 0;
     this.currentKey = 0;
