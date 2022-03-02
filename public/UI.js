@@ -54,14 +54,14 @@ class UI{
 
     ctx.save();
     ctx.lineWidth = 6;
-    this.currentLevel.display(ctx);
+    //this.currentLevel.display(ctx); can't run this yet without display method
     ctx.restore();
 
-    window.requestAnimationFrame(this.draw);
+    window.requestAnimationFrame(this.draw.bind(this));
   }
 
   initializeAnimation() {
-    window.requestAnimationFrame(this.draw);
+    window.requestAnimationFrame(this.draw.bind(this));
   }
 
 

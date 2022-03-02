@@ -1,6 +1,4 @@
 
-
-
 class Level {
   constructor(levelNumber) {
     this.levelNum = levelNumber;
@@ -9,7 +7,7 @@ class Level {
     this.horseArray = [];
     this.obstacleIndexes = [];
     this.backgroundImage = new Image();// Create new img element
-    this.backgroundImage.src = 'CompleteTrack.png'; // Set source path
+    this.backgroundImage.src = './Track/CompleteTrack.png'; // Set source path
     this.timer = null;
     this.obstacles = [];
     this.obstacles.length = 20000;
@@ -42,7 +40,7 @@ class Level {
       generateIndexesForObstaclesToBePlaced(12);
     }
     let obstaclesPutIn = 0;
-    for (int k = 0; k < 20000; k++)
+    for (let k = 0; k < 20000; k++)
     {
       if (k == obstacleIndexes[obstaclesPutIn])
       {
@@ -55,7 +53,7 @@ class Level {
 
   generateIndexesForObstaclesToBePlaced (numObstacles)
   {
-    for (int k = 0; k < numObstacles; k++)
+    for (let k = 0; k < numObstacles; k++)
     {
       let num = this.getRandomInt(0,20000);
       while (k != 0 && this.obstacleIndexes[k].includes(num))
@@ -71,11 +69,11 @@ class Level {
     this.userSprite = new Image();// Create new img element
     this.userSprite.src = 'horseSprite.png';
     this.computerSprite = new Image();
-    PlayerHorse user = new PlayerHorse(5,userSprite);
+    let user = new PlayerHorse(5,userSprite);
     if (this.levelNum == 4)
     {
       this.computerSprite.src = 'cheetahSprite.png';
-      RoboHorse cpu = new RoboHorse (4, computerSprite);
+      let cpu = new RoboHorse (4, computerSprite);
       horseArray = [0,0,0,0,cpu,user];
     }
     else
@@ -92,11 +90,11 @@ class Level {
       {
         this.computerSprite.src = 'turtleSprite';
       }
-      RoboHorse cpu1 = new RoboHorse (0, computerSprite);
-      RoboHorse cpu2 = new RoboHorse (1, computerSprite);
-      RoboHorse cpu3 = new RoboHorse (2, computerSprite);
-      RoboHorse cpu4 = new RoboHorse (3, computerSprite);
-      RoboHorse cpu5 = new RoboHorse (4, computerSprite);
+      let cpu1 = new RoboHorse (0, computerSprite);
+      let cpu2 = new RoboHorse (1, computerSprite);
+      let cpu3 = new RoboHorse (2, computerSprite);
+      let cpu4 = new RoboHorse (3, computerSprite);
+      let cpu5 = new RoboHorse (4, computerSprite);
       horseArray = [cpu1, cpu2, cpu3, cpu4, cpu5, user];
     }
   }
@@ -109,7 +107,7 @@ class Level {
     canvas.style.backgroundImage= this.backgroundImage;
     canvas.style.backgroundRepeat = "no-repeat";
     canvas.style.backgroundSize = "cover";
-    while (!isFinished())
+    while (!isFinishedForAllHorses())
     {
       let result = checkGameState();
       if (result == 1)
@@ -125,16 +123,15 @@ class Level {
   }
 
   checkGameState() {
-    let playerPos = this.player.position;
-    if (this.player.isJumping) {
-      if (obstacles[playerPos] == true) {
-          return 1;
-        }
-      }
-      if (playerPos == 2000) {
-        return 2;
-      }
-      return 0;
+    let playerPos = this.player.getPosition();
+    console.log(playerPos);
 
-    }
-  }
+    if (obstacles[playerPos] == true && !this.player.isJumping) {
+      return 1;
+    }
+    if (playerPos == 2000) {
+      return 2;
+    }
+    return 0;
+  }
+}
