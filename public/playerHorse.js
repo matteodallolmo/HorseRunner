@@ -7,16 +7,15 @@ class PlayerHorse extends Horse
     this.accelToAdd = 0;
     this.prevKey = 0;
     this.currentKey = 0;
-    this.position = 0;
   }
-
+  getPosition()
+  {
+    return super.position;
+  }
 
   //this takes in a INT that represents the key
   //37 = leftArrow, 39 = rightArrow
-  getPosition ()
-  {
-    return this.position;
-  }
+
   keyPressed(pressedKey)
   {
     this.currentKey = pressedKey;

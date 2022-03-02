@@ -10,36 +10,11 @@ class UI{
 
     this.levelNum = 1;
     this.currentLevel = new Level(this.levelNum);
+    this.currentLevel.playGame();
 
     setTimeout(() => {
       this.initializeAnimation();
     }, 1500);
-
-    this.gameStillPlaying = true;
-    this.finished = false;
-    this.collided = false;
-
-    while (this.gameStillPlaying) {
-      this.gameStillPlaying = false;
-      if (this.currentLevel.checkGameState() == 1) {
-        this.collided = true;
-        this.currentLevel.handleCollision();
-      } else if (this.currentLevel.checkGameState() == 2) {
-        this.finished = true;
-        if (this.currentLevel.wonOrLost()==1)
-        {
-          this.levelNum++;
-          this.currentLevel = new Level(levelNum);
-          this.currentLevel.win();
-        }
-        else {
-          this.gameStillPlaying= false;
-          this.currentLevel.lose();
-          this();
-        }
-
-      }
-    }
   }
 
 
@@ -63,6 +38,29 @@ class UI{
 
   initializeAnimation() {
     window.requestAnimationFrame(this.draw());
+  }
+
+  handleLoss()
+  {
+    this.backgroundImage = "url('Stage Screens/GameOver.png')";
+    var canvas = document.getElementById("game");
+    canvas.style.backgroundImage= this.backgroundImage;
+    canvas.style.backgroundRepeat = "no-repeat";
+    canvas.style.backgroundSize = "cover";
+
+    setTimeout(() => {
+      this();
+    }, 1500);
+  }
+
+  handleWin()
+  {
+    this.backgroundImage = "url('Stage Screens/GameOver.png')";
+    var canvas = document.getElementById("game");
+    canvas.style.backgroundImage= this.backgroundImage;
+    canvas.style.backgroundRepeat = "no-repeat";
+    canvas.style.backgroundSize = "cover";
+
   }
 
 

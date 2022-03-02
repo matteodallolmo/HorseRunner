@@ -6,7 +6,12 @@ class Level {
     this.won = null;
     this.lost = null;
     this.isFinished;
-    this.player = new PlayerHorse(1, 1); //temp parameters
+    this.playerSprite;
+    if (levelNum ==1)
+    {
+      playerSprite=
+    }
+    this.player = new PlayerHorse(3, 1); //temp parameters
     this.initialTime = Date.now;
     this.horsePerLane = [new RoboHorse(this.levelNumber), new RoboHorse(this.levelNumber), this.player, new RoboHorse(this.levelNumber), new RoboHorse(this.levelNumber), new RoboHorse(this.levelNumber)]
   }
@@ -26,7 +31,14 @@ class Level {
       return 1;
     }
     if (playerPos == 2000) {
+      currentTime  = Date.now;
+      this.player.setRaceTime(currentTime - this.initialTime);
+      if (this.winner == null)
+      {
+        this.winner = this.player;
+      }
       return 2;
+
     }
     return 0;
   }
@@ -36,7 +48,7 @@ class Level {
       if (x != 3) {
         if (this.horsePerLane[x].getPosition() == 2000) {
           currentTime = Date.now;
-          this.horsePerLane[x].setRaceTime(currentTime - initialTime);
+          this.horsePerLane[x].setRaceTime(currentTime - this.initialTime);
           if (this.winner == null) {
             this.winner = this.horsePerLane[x];
           }
@@ -47,7 +59,8 @@ class Level {
 
   isFinishedForAllHorses() {
     for (var x = 0; x < 5; x++) {
-      if (this.horsePerLane[x].getTime() != null) {} else {
+      if (this.horsePerLane[x].getTime() != null) {}
+      else {
         return false;
       }
       return true;
@@ -64,6 +77,7 @@ class Level {
   win(){
     this.won = true;
     this.lost = false;
+
   }
 
   lose(){
@@ -75,7 +89,7 @@ class Level {
   handleCollision() {
     this.player.velocity = 0;
     this.player.acceleration = 0;
-    this.player.
+    //also needs to disable uncklickable, but we don't have any event listeners for that right now.
   }
 
 }
