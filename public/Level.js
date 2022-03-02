@@ -3,6 +3,8 @@ class Level {
     this.obstacles = new Array(2000);
     this.levelNumber = levelNumber;
     this.winner = null;
+    this.won = null;
+    this.lost = null;
     this.isFinished;
     this.player = new PlayerHorse(1, 1); //temp parameters
     this.initialTime = Date.now;
@@ -60,14 +62,20 @@ class Level {
   }
 
   win(){
-
+    this.won = true;
+    this.lost = false;
   }
 
   lose(){
-
+    this.lost = true;
+    this.won = false;
   }
 
 
-  handleCollision() {}
+  handleCollision() {
+    this.player.velocity = 0;
+    this.player.acceleration = 0;
+    this.player.
+  }
 
 }
