@@ -4,15 +4,15 @@ class Level {
     this.levelNum = levelNumber;
     this.refreshTime = 60; //fps
     this.obstaclesArray = [];
+    this.obstaclesArray.length = 20000;
     this.horseArray = [];
     this.obstacleIndexes = [];
     this.backgroundImage = new Image();// Create new img element
     this.backgroundImage.src = './Track/CompleteTrack.png'; // Set source path
     this.timer = null;
-    this.obstacles = [];
-    this.obstacles.length = 20000;
-    this.levelNumber = levelNumber;
-    this.player = new PlayerHorse(1,1);//temp parameters
+    this.winner = null;
+    this.isFinished = false;
+    this.initialTime = Date.now;
   }
 
   getRandomInt(min, max)
@@ -122,16 +122,45 @@ class Level {
     }
   }
 
-  checkGameState() {
-    let playerPos = this.player.getPosition();
-    console.log(playerPos);
+  checkGameState() { // Ariana code
+    let playerPos = this.player.getPosition();
+    console.log(playerPos);
 
-    if (obstacles[playerPos] == true && !this.player.isJumping) {
-      return 1;
-    }
-    if (playerPos == 2000) {
-      return 2;
-    }
-    return 0;
-  }
-}
+    if (obstacles[playerPos] == true && !this.player.isJumping) {
+      return 1;
+    }
+    if (playerPos == 2000) {
+      return 2;
+    }
+    return 0;
+  }
+
+  checkForRoboHorseFinish() { // Ariana code
+    for (var x = 0; x < 5; x++) {
+      if (x != 3) {
+        if (this.horsePerLane[x].getPosition() == 2000) {
+          currentTime = Date.now;
+          this.horsePerLane[x].setRaceTime(currentTime - initialTime);
+          if (this.winner == null) {
+            this.winner = this.horsePerLane[x];
+          }
+        }
+      }
+    }
+  }
+
+  isFinishedForAllHorses() { // Ariana code
+    for (var x = 0; x < 5; x++) {
+      if (this.horsePerLane[x].getTime() != null) {} else {
+        return false;
+      }
+      return true;
+    }
+  }
+
+  isWinner() { // Ariana code
+    if (this.winner = this.player) {
+      return true;
+    }
+    return false;
+  }

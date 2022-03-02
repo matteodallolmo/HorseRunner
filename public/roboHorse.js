@@ -8,11 +8,14 @@ class RoboHorse extends Horse{
     super(lanePos, levelNum);
     this.lanePosition = lanePos;
     this.level = levelNum;
+    this.raceTime = null;
     this.isJumping = true;
     let possibleNames = [];
     this.maxRoboHorseVelocities = [10,20,30,70];
     this.velocity = 0;
     this.acceleration = 0;
+    this.position = 0;
+
     if (levelNum == 1)
     {
         this.possibleNames = ["Rafael", "Donnatello", "Leonardo", "Shelly", "Mr. Green", "Tuck", "Franklin", "Michaelangelo"];
@@ -31,7 +34,14 @@ class RoboHorse extends Horse{
     }
     let name = this.generateName();
   }
-
+  getPosition()
+  {
+    return this.position;
+  }
+  setRaceTime(finishedTime)
+  {
+    this.raceTime = finsishedTime;
+  }
   getRandomInt(min, max)
   {
     min = Math.ceil(min);
