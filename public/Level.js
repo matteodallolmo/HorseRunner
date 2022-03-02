@@ -7,11 +7,8 @@ class Level {
     this.lost = null;
     this.isFinished;
     this.playerSprite;
-    if (levelNum ==1)
-    {
-      playerSprite=
-    }
-    this.player = new PlayerHorse(3, 1); //temp parameters
+
+    this.player = new PlayerHorse(3, this.playerSprite); //temp parameters
     this.initialTime = Date.now;
     this.horsePerLane = [new RoboHorse(this.levelNumber), new RoboHorse(this.levelNumber), this.player, new RoboHorse(this.levelNumber), new RoboHorse(this.levelNumber), new RoboHorse(this.levelNumber)]
   }
@@ -43,7 +40,8 @@ class Level {
     return 0;
   }
 
-  checkForRoboHorseFinish() {
+  checkForRoboHorseFinish()//checks for a robohorse finish and updates its race time when it does. Also sets winner to that horse if it was first to finish 
+  {
     for (var x = 0; x < 5; x++) {
       if (x != 3) {
         if (this.horsePerLane[x].getPosition() == 2000) {
@@ -77,12 +75,21 @@ class Level {
   win(){
     this.won = true;
     this.lost = false;
-
+    this.backgroundImage = "url('Stage Screens/GameOver.png')";
+    var canvas = document.getElementById("game");
+    canvas.style.backgroundImage = this.backgroundImage;
+    canvas.style.backgroundRepeat = "no-repeat";
+    canvas.style.backgroundSize = "cover";
   }
 
   lose(){
     this.lost = true;
     this.won = false;
+    this.backgroundImage = "url('Stage Screens/GameOver.png')";
+    var canvas = document.getElementById("game");
+    canvas.style.backgroundImage = this.backgroundImage;
+    canvas.style.backgroundRepeat = "no-repeat";
+    canvas.style.backgroundSize = "cover";
   }
 
 
