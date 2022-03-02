@@ -18,6 +18,7 @@ class UI{
     this.gameStillPlaying = true;
     this.finished = false;
     this.collided = false;
+
     while (this.gameStillPlaying) {
       this.gameStillPlaying = false;
       if (this.currentLevel.checkGameState() == 1) {
