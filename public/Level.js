@@ -13,6 +13,9 @@ class Level {
     this.winner = null;
     this.isFinished = false;
     this.initialTime = Date.now;
+    this.userSprite = new Image();// Create new img element
+    this.userSprite.src = './horseSprite.png';
+    this.userPlayer = new PlayerHorse(5,this.userSprite);
   }
 
   getRandomInt(min, max)
@@ -42,13 +45,13 @@ class Level {
     let obstaclesPutIn = 0;
     for (let k = 0; k < 20000; k++)
     {
-      if (k == obstacleIndexes[obstaclesPutIn])
+      if (k == this.bstacleIndexes[obstaclesPutIn])
       {
-        obstaclesArray [k] = true;
+        this.obstaclesArray[k] = true;
         obstaclesPutIn++;
       }
     }
-    obstacleIndexes = [];
+    this.obstacleIndexes = [];
   }
 
   generateIndexesForObstaclesToBePlaced (numObstacles)
@@ -66,36 +69,33 @@ class Level {
 
   populateHorseArray ()
   {
-    this.userSprite = new Image();// Create new img element
-    this.userSprite.src = 'horseSprite.png';
     this.computerSprite = new Image();
-    let user = new PlayerHorse(5,userSprite);
     if (this.levelNum == 4)
     {
-      this.computerSprite.src = 'cheetahSprite.png';
-      let cpu = new RoboHorse (4, computerSprite);
-      horseArray = [0,0,0,0,cpu,user];
+      this.computerSprite.src = './cheetahSprite.png';
+      let cpu = new RoboHorse (4, this.computerSprite);
+      this.horseArray = [0,0,0,0,cpu,this.userPlayer];
     }
     else
     {
       if (this.levelNum == 3)
       {
-        this.computerSprite.src = 'zebraSprite.png';
+        this.computerSprite.src = './zebraSprite.png';
       }
       else if (this.levelNum == 2)
       {
-        this.computerSprite.src = 'camelSprite.png';
+        this.computerSprite.src = './camelSprite.png';
       }
       else
       {
-        this.computerSprite.src = 'turtleSprite';
+        this.computerSprite.src = './turtleSprite';
       }
-      let cpu1 = new RoboHorse (0, computerSprite);
-      let cpu2 = new RoboHorse (1, computerSprite);
-      let cpu3 = new RoboHorse (2, computerSprite);
-      let cpu4 = new RoboHorse (3, computerSprite);
-      let cpu5 = new RoboHorse (4, computerSprite);
-      horseArray = [cpu1, cpu2, cpu3, cpu4, cpu5, user];
+      let cpu1 = new RoboHorse (0, this.computerSprite);
+      let cpu2 = new RoboHorse (1, this.computerSprite);
+      let cpu3 = new RoboHorse (2, this.computerSprite);
+      let cpu4 = new RoboHorse (3, this.computerSprite);
+      let cpu5 = new RoboHorse (4, this.computerSprite);
+      this.horseArray = [cpu1, cpu2, cpu3, cpu4, cpu5, this.userPlayer];
     }
   }
 
@@ -123,10 +123,10 @@ class Level {
   }
 
   checkGameState() { // Ariana code
-    let playerPos = this.player.getPosition();
+    let playerPos = this.userPlayer.getPosition();
     console.log(playerPos);
 
-    if (obstacles[playerPos] == true && !this.player.isJumping) {
+    if (this.obstaclesArray[playerPos] == true && !this.userPlayer.isJumping) {
       return 1;
     }
     if (playerPos == 2000) {
@@ -138,11 +138,11 @@ class Level {
   checkForRoboHorseFinish() { // Ariana code
     for (var x = 0; x < 5; x++) {
       if (x != 3) {
-        if (this.horsePerLane[x].getPosition() == 2000) {
+        if (this.horseArray[x].getPosition() == 2000) {
           currentTime = Date.now;
-          this.horsePerLane[x].setRaceTime(currentTime - initialTime);
+          this.horseArray[x].setRaceTime(currentTime - initialTime);
           if (this.winner == null) {
-            this.winner = this.horsePerLane[x];
+            this.winner = this.horseArray[x];
           }
         }
       }
@@ -151,7 +151,8 @@ class Level {
 
   isFinishedForAllHorses() { // Ariana code
     for (var x = 0; x < 5; x++) {
-      if (this.horsePerLane[x].getTime() != null) {} else {
+      if (this.horseArray[x].getTime() != null) {}
+      else {
         return false;
       }
       return true;
@@ -159,8 +160,9 @@ class Level {
   }
 
   isWinner() { // Ariana code
-    if (this.winner = this.player) {
+    if (this.winner = this.userPlayer) {
       return true;
     }
     return false;
   }
+}
