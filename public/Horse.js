@@ -62,6 +62,7 @@ class Horse {
     if (this.currentLoopIndex >= this.cycleLoop.length) {
         this.currentLoopIndex = 0;
     }
+    this.movement(1);
     window.requestAnimationFrame(this.animate.bind(this));
   }
 
