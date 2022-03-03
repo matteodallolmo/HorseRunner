@@ -64,11 +64,9 @@ class UI {
       window.requestAnimationFrame(this.draw());
     }
 
-    initializeAnimation() {
+    initializeAnimation() 
+    {
       window.requestAnimationFrame(this.draw());
     }
-
-
   }
-
   const ui = new UI();
