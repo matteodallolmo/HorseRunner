@@ -7,7 +7,6 @@ class PlayerHorse extends Horse
     this.accelToAdd = 0;
     this.prevKey = 0;
     this.currentKey = 0;
-    this.position = 0;
   }
 
 

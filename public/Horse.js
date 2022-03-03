@@ -1,6 +1,6 @@
 
 class Horse{
-  constructor(lanePos,sprite){
+  constructor(lanePos,levelNum){
     this.position = 0;
     this.lanePosition = lanePos;//the verticle position of the Horse when not jumping
     this.spriteLength = 197; //width of sprite
@@ -9,7 +9,22 @@ class Horse{
     this.isJumping = false; // stores whether the horse is jumping
     this.velocity = 0; // velocity of the horse
     this.acceleration = 0; // acceleration of the horse
-    this.spriteSheet=sprite; // sprite sheet of the horse, animate by css
+    this.horseSprite = new Image();
+    if (this.levelNum == 3)
+    {
+      this.horseSprite.src = './zebraSprite.png';
+    }
+    else if (this.levelNum == 2)
+    {
+      this.horseSprite.src = './camelSprite.png';
+    }
+    else if (this.levelNum == 1)
+    {
+      this.horseSprite.src = './turtleSprite.png';
+    }
+    else {
+      this.horseSprite.src = './cheetahSprite.png';
+    }
   }
   movement(time){//move expected amount of space over the refresh time
   //run every frame when enabled
