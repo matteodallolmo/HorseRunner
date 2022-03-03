@@ -1,3 +1,4 @@
+
 class UI {
   constructor() {
 
@@ -43,10 +44,10 @@ class UI {
 
       }
     }
+  }
 
 
-    draw()
-    {
+    draw() {
       var ctx = document.getElementById('game').getContext('2d');
 
       ctx.globalCompositeOperation = 'source-over';
@@ -64,8 +65,7 @@ class UI {
       window.requestAnimationFrame(this.draw());
     }
 
-    initializeAnimation() 
-    {
+    initializeAnimation() {
       window.requestAnimationFrame(this.draw());
     }
   }
