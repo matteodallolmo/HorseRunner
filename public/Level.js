@@ -99,7 +99,7 @@ class Level {
     this.populateHorsePerLane ();
     while (!this.isFinishedForAllHorses())
     {
-      this.checkForHorseFinish();
+      this.checkForRoboHorseFinish();
       // for loop for testing purposes only
       for (let k = 0; k < this.horsePerLane.length; k++)
       {
@@ -136,8 +136,8 @@ class Level {
     for (var x = 0; x < 5; x++) {
       if (x != 3) {
         if (this.horsePerLane[x].position == 2000) {
-          currentTime = Date.now;
-          this.horsePerLane[x].raceTime= (currentTime - this.initialTime);
+          this.currentTime = Date.now;
+          this.horsePerLane[x].raceTime= (this.currentTime - this.initialTime);
           if (this.winner == null) {
             this.winner = this.horsePerLane[x];
           }
