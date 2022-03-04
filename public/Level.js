@@ -114,7 +114,7 @@ class Level {
     let playerPos = this.player.position;
     console.log(playerPos);
 
-    if (this.obstacles[playerPos] == true && !this.player.isJumping) {
+    if (this.obstaclesArray[playerPos] == true && !this.player.isJumping) {
       return 1;
     }
     if (playerPos == 2000) {
