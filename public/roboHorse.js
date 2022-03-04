@@ -41,6 +41,10 @@ class RoboHorse extends Horse{
   {
     this.raceTime = finsishedTime;
   }
+  getRaceTime ()
+  {
+    return this.raceTime;
+  }
   getRandomInt(min, max)
   {
     min = Math.ceil(min);

@@ -62,11 +62,10 @@ class UI {
       //this.currentLevel.display(ctx);
       ctx.restore();
 
-      window.requestAnimationFrame(this.draw());
-    }
+    window.requestAnimationFrame(this.draw.bind(this));
+  }
 
-    initializeAnimation() {
-      window.requestAnimationFrame(this.draw());
-    }
+  initializeAnimation() {
+    window.requestAnimationFrame(this.draw.bind(this));
   }
   const ui = new UI();
