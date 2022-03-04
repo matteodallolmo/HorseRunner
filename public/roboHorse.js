@@ -14,6 +14,7 @@ class RoboHorse extends Horse{
     this.maxRoboHorseVelocities = [10,20,30,70];
     this.velocity = 0;
     this.acceleration = 0;
+
     if (levelNum == 1)
     {
         this.possibleNames = ["Rafael", "Donnatello", "Leonardo", "Shelly", "Mr. Green", "Tuck", "Franklin", "Michaelangelo"];
