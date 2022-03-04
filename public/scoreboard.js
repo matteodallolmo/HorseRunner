@@ -33,10 +33,12 @@ class Scoreboard {
       var ctx = canvas.getContext("2d");
       this.afterRace.onload = () => {
         ctx.drawImage(this.afterRace,0,0,canvas.width,canvas.height);
+
+
       }
     }
 }
 
 const scoreboard = new Scoreboard();
-//scoreboard.drawAfterLoss();
+scoreboard.drawAfterLoss();
 scoreboard.drawAfterRace();
