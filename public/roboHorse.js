@@ -8,6 +8,7 @@ class RoboHorse extends Horse{
     super(lanePos, levelNum);
     this.lanePosition = lanePos;
     this.level = levelNum;
+    this.raceTime = null;
     this.isJumping = true;
     let possibleNames = [];
     this.maxRoboHorseVelocities = [10,20,30,70];
@@ -32,7 +33,18 @@ class RoboHorse extends Horse{
     }
     let name = this.generateName();
   }
-
+  getPosition()
+  {
+    return super.position;
+  }
+  setRaceTime(finishedTime)
+  {
+    this.raceTime = finsishedTime;
+  }
+  getRaceTime ()
+  {
+    return this.raceTime;
+  }
   getRandomInt(min, max)
   {
     min = Math.ceil(min);
