@@ -16,15 +16,14 @@ class Level {
     this.winner = null;
     this.won = null;
     this.lost = null;
-    this.player = new PlayerHorse(3, 0); //temp parameters
     this.initialTime = Date.now;
-    this.horsePerLane = [new RoboHorse(this.levelNumber), new RoboHorse(this.levelNumber), this.player, new RoboHorse(this.levelNumber), new RoboHorse(this.levelNumber), new RoboHorse(this.levelNumber)]
+    this.horsePerLane = [];
     console.log ('level created');
     this.isFinished = false;
     this.initialTime = Date.now;
     this.userSprite = new Image();// Create new img element
     this.userSprite.src = './Sprites/horseSprite.png';
-    this.userPlayer = new PlayerHorse(5,this.userSprite);
+    this.player = new PlayerHorse(3,this.userSprite);
   }
 
   getRandomInt(min, max)
@@ -86,10 +85,11 @@ class Level {
     {
       let cpu1 = new RoboHorse (0, this.levelNum);
       let cpu2 = new RoboHorse (1, this.levelNum);
-      let cpu3 = new RoboHorse (2, this.levelNum);
       let cpu4 = new RoboHorse (3, this.levelNum);
       let cpu5 = new RoboHorse (4, this.levelNum);
-      this.horsePerLane = [cpu1, cpu2, cpu3, cpu4, cpu5, this.userPlayer];
+      let cpu6 = new RoboHorse (5, this.levelNum);
+
+      this.horsePerLane = [cpu1, cpu2, this.player, cpu3, cpu4, cpu5];
     }
   }
 
@@ -118,7 +118,7 @@ class Level {
       return 1;
     }
     if (playerPos == 2000) {
-      currentTime  = Date.now;
+      this.currentTime  = Date.now;
       this.player.raceTime = (currentTime - this.initialTime);
       if (this.winner == null)
       {
