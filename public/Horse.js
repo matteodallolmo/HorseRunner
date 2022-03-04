@@ -7,18 +7,17 @@ class Horse {
       "Sprites/camelSprite.png",
       "Sprites/zebraSprite.png",
       "Sprites/cheetahSprite.png"];
-
     this.position = 0;
     this.lanePosition = lanePos;//the verticle position of the Horse when not jumping
     this.recentlyJumped = false; // determines jumping cooldown to make jump less spammable
     this.isJumping = false; // stores whether the horse is jumping
     this.velocity = 0; // velocity of the horse
     this.acceleration = 0; // acceleration of the horse
+    this.raceTime = null; //the time it took for the horse to finish, is null if hasn't finished yet
     this.spriteSheet = this.spriteArray[levelNum]; // sprite sheet of the horse, animate by css
     this.img = new Image();
     this.img.src = this.spriteSheet;
     this.spriteDims = new SpriteDimensions(levelNum);
-
     this.cycleLoop = [0, 1, 2, 3, 4, 5];
     this.currentLoopIndex = 0;
   }
@@ -68,6 +67,16 @@ class Horse {
 
   initializeAnimation() {
     window.requestAnimationFrame(this.animate.bind(this));
+  }
+
+  setRaceTime(time)
+  {
+    this.raceTime = time;
+  }
+
+  getTime()
+  {
+    return this.raceTime;
   }
 
 }

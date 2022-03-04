@@ -18,6 +18,7 @@ class UI{
     this.gameStillPlaying = true;
     this.finished = false;
     this.collided = false;
+
     while (this.gameStillPlaying) {
       this.gameStillPlaying = false;
       if (this.currentLevel.checkGameState() == 1) {
@@ -54,7 +55,7 @@ class UI{
 
     ctx.save();
     ctx.lineWidth = 6;
-    this.currentLevel.display(ctx);
+    //this.currentLevel.display(ctx);
     ctx.restore();
 
     window.requestAnimationFrame(this.draw.bind(this));
