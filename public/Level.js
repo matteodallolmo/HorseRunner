@@ -97,14 +97,17 @@ class Level {
   {
     this.populateObstaclesArray ();
     this.populateHorsePerLane ();
+    console.log(this.horsePerLane.length);
     while (!this.isFinishedForAllHorses())
     {
       this.checkForRoboHorseFinish();
+
       // for loop for testing purposes only
       for (let k = 0; k < this.horsePerLane.length; k++)
       {
         this.horsePerLane[k].position += 500;
       }
+
     }
     // need to add checkForRoboHorseFinish and run it all the time
     // can't do it right now because position isn't getting updated with our current html siutation
@@ -136,7 +139,7 @@ class Level {
     for (var x = 0; x < 5; x++) {
       if (x != 3) {
         if (this.horsePerLane[x].position == 2000) {
-          this.currentTime = Date.now;
+          this.currentTime = Date.now();
           this.horsePerLane[x].raceTime= (this.currentTime - this.initialTime);
           if (this.winner == null) {
             this.winner = this.horsePerLane[x];
