@@ -95,6 +95,7 @@ class Level {
     while (!this.isFinishedForAllHorses())
     {
       this.checkForHorseFinish();
+      // for loop for testing purposes only
       for (let k = 0; k < this.horseArray.length; k++)
       {
         this.horseArray[k].position += 500;
