@@ -128,11 +128,7 @@ class Level {
 
     }
     return 0;
-  }
-      return 2;
 
-    }
-    return 0;
   }
 
   checkForRoboHorseFinish()//checks for a robohorse finish and updates its race time when it does. Also sets winner to that horse if it was first to finish
