@@ -9,6 +9,7 @@ class Horse{
     this.isJumping = false; // stores whether the horse is jumping
     this.velocity = 0; // velocity of the horse
     this.acceleration = 0; // acceleration of the horse
+    this.raceTime = null; //the time it took for the horse to finish, is null if hasn't finished yet
     this.horseSprite = new Image();
     if (this.levelNum == 3)
     {
@@ -50,5 +51,15 @@ class Horse{
   animate(velocity){
     //sets animation-duration of sprite(css) to 6*Velocity, animation-timing-function to steps(6). Used every frame.
     //someone else needs to complete this.
+  }
+
+  setRaceTime(time)
+  {
+    this.raceTime = time;
+  }
+
+  getTime()
+  {
+    return this.raceTime;
   }
 }

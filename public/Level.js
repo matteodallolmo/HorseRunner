@@ -9,6 +9,10 @@ class Level {
     this.obstacleIndexes = [];
     this.backgroundImage = new Image();// Create new img element
     this.backgroundImage.src = './Track/CompleteTrack.png'; // Set source path
+    var canvas = document.getElementById("game");
+    canvas.style.backgroundImage= this.backgroundImage;
+    canvas.style.backgroundRepeat = "no-repeat";
+    canvas.style.backgroundSize = "cover";
     this.timer = null;
     this.winner = null;
     this.isFinished = false;
@@ -88,62 +92,59 @@ class Level {
   {
     this.populateObstaclesArray ();
     this.populateHorseArray ();
-    var canvas = document.getElementById("game");
-    canvas.style.backgroundImage= this.backgroundImage;
-    canvas.style.backgroundRepeat = "no-repeat";
-    canvas.style.backgroundSize = "cover";
     while (!this.isFinishedForAllHorses())
     {
-      let result = this.checkGameState();
-      if (result == 1)
+      this.checkForHorseFinish();
+      for (let k = 0; k < this.horseArray.length; k++)
       {
-        console.log ("collision"); // needs to have an actual affect on horse at some point
+        this.horseArray[k].position += 500;
       }
-      else if (result == 2)
-      {
-        console.log ("end of race");
-        break; // probably need to queue the scoreboard
-      }
-      let updateHorseStatus = this.checkForRoboHorseFinish();
     }
+    // need to add checkForRoboHorseFinish and run it all the time
+    // can't do it right now because position isn't getting updated with our current html siutation
   }
 
-  checkGameState() { // Ariana code
+  checkGameState() // ariana code
+  {
     let playerPos = this.userPlayer.getPosition();
-    console.log(playerPos);
+    console.log(this.playerPos);
 
-    if (this.obstaclesArray[playerPos] == true && !this.userPlayer.isJumping) {
+    if (this.obstaclesArray[this.playerPos] == true && !this.userPlayer.isJumping)
+    {
+      console.log ("collision");
       return 1;
     }
-    if (playerPos == 2000) {
+
+    if (this.playerPos == 2000 || this.playerPos > 2000) {
+      console.log ("race over");
       return 2;
     }
     return 0;
   }
 
-  checkForRoboHorseFinish() { // Ariana code
-    for (var x = 0; x < 5; x++) {
-      if (x != 3) {
-        if (this.horseArray[x].getPosition() == 2000) {
+  checkForHorseFinish() { // Ariana code
+    for (var x = 0; x < 6; x++) {
+        if (this.horseArray[x].getPosition() == 2000 || this.horseArray[x].getPosition() > 2000) {
           currentTime = Date.now;
           this.horseArray[x].setRaceTime(currentTime - initialTime);
-          if (this.winner == null) {
-            this.winner = this.horseArray[x];
+        }
+        if (this.winner == null) {
+          this.winner = this.horseArray[x];
+          console.log("race is over, we have a winner!");
           }
         }
-      }
     }
-  }
 
   isFinishedForAllHorses() { // Ariana code
-    for (var x = 0; x < 5; x++) {
-      if (this.horseArray[x].getTime() != null) {}
-      else {
-        return false;
+    for (var x = 0; x < 5; x++)
+    {
+      if (this.horseArray[x].getTime() == null)
+      {
+        return false
       }
+    }
       return true;
     }
-  }
 
   isWinner() { // Ariana code
     if (this.winner = this.userPlayer) {
