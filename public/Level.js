@@ -89,7 +89,7 @@ class Level {
       let cpu5 = new RoboHorse (4, this.levelNum);
       let cpu6 = new RoboHorse (5, this.levelNum);
 
-      this.horsePerLane = [cpu1, cpu2, this.player, cpu3, cpu4, cpu5];
+      this.horsePerLane = [cpu1, cpu2, this.player, cpu4, cpu5, cpu6];
     }
   }
 
@@ -149,12 +149,11 @@ class Level {
   isFinishedForAllHorses() {
     for (var x = 0; x < 5; x++)
     {
-      if (this.horsePerLane[x].raceTime != null) {}
-      else {
+      if (this.horsePerLane[x].raceTime == null) {
         return false;
       }
     }
-      return true;
+    return true;
     }
 
   isWinner() { // Ariana code

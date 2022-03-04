@@ -10,7 +10,7 @@ class UI {
 
     this.levelNum = 1;
     this.currentLevel = new Level(this.levelNum);
-    this.currentLevel.playGame();
+    //this.currentLevel.playGame();
 
     setTimeout(() => {
       this.initializeAnimation();
