@@ -111,7 +111,7 @@ class Level {
   }
 
   checkGameState() {
-    let playerPos = this.player.getPosition();
+    let playerPos = this.player.position;
     console.log(playerPos);
 
     if (this.obstacles[playerPos] == true && !this.player.isJumping) {
@@ -119,7 +119,7 @@ class Level {
     }
     if (playerPos == 2000) {
       currentTime  = Date.now;
-      this.player.setRaceTime(currentTime - this.initialTime);
+      this.player.raceTime = (currentTime - this.initialTime);
       if (this.winner == null)
       {
         this.winner = this.player;
@@ -139,9 +139,9 @@ class Level {
   {
     for (var x = 0; x < 5; x++) {
       if (x != 3) {
-        if (this.horsePerLane[x].getPosition() == 2000) {
+        if (this.horsePerLane[x].position == 2000) {
           currentTime = Date.now;
-          this.horsePerLane[x].setRaceTime(currentTime - this.initialTime);
+          this.horsePerLane[x].raceTime= (currentTime - this.initialTime);
           if (this.winner == null) {
             this.winner = this.horsePerLane[x];
           }
@@ -153,7 +153,7 @@ class Level {
   isFinishedForAllHorses() {
     for (var x = 0; x < 5; x++)
     {
-      if (this.horsePerLane[x].getTime() != null) {}
+      if (this.horsePerLane[x].raceTime != null) {}
       else {
         return false;
       }
