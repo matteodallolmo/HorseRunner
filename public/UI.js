@@ -1,4 +1,3 @@
-
 class UI {
   constructor() {
 
@@ -25,16 +24,21 @@ class UI {
       if (this.currentLevel.checkGameState() == 1) {
         this.collided = true;
         this.currentLevel.handleCollision();
-      } else if (this.currentLevel.checkGameState() == 2) {
+      }
+      else if (this.currentLevel.checkGameState() == 2)
+      {
         this.finished = true;
-        if (this.currentLevel.isWinner()) {
+        if (this.currentLevel.isWinner()) 
+        {
           this.currentLevel.win();
           this.levelNum++;
           setTimeout(() => {
             this.currentLevel = new Level(levelNum);
           }, 15000);
 
-        } else {
+        }
+        else
+        {
           this.gameStillPlaying = false;
           this.currentLevel.lose();
           setTimeout(() => {
@@ -47,20 +51,20 @@ class UI {
   }
 
 
-    draw() {
-      var ctx = document.getElementById('game').getContext('2d');
+  draw() {
+    var ctx = document.getElementById('game').getContext('2d');
 
-      ctx.globalCompositeOperation = 'source-over';
-      ctx.clearRect(0, 0, 1000, 1900); // clear canvas
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.clearRect(0, 0, 1000, 1900); // clear canvas
 
-      // Figure out what pen we wanna draw with
-      ctx.fillStyle = 'rgba(0, 153, 255, 1)';
-      ctx.strokeStyle = 'rgba(0, 153, 255, 0.4)';
+    // Figure out what pen we wanna draw with
+    ctx.fillStyle = 'rgba(0, 153, 255, 1)';
+    ctx.strokeStyle = 'rgba(0, 153, 255, 0.4)';
 
-      ctx.save();
-      ctx.lineWidth = 6;
-      //this.currentLevel.display(ctx);
-      ctx.restore();
+    ctx.save();
+    ctx.lineWidth = 6;
+    //this.currentLevel.display(ctx);
+    ctx.restore();
 
     window.requestAnimationFrame(this.draw.bind(this));
   }
@@ -69,4 +73,4 @@ class UI {
     window.requestAnimationFrame(this.draw.bind(this));
   }
 }
-  const ui = new UI();
+const ui = new UI();
