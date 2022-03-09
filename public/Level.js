@@ -81,6 +81,11 @@ class Level {
         this.horseArray[k].position += 500;
       }
     }
+
+    while (this.checkGameState() == 0) {
+      this.checkForHorseFinish();
+      this.checkGameState();
+    }
     // need to add checkForRoboHorseFinish and run it all the time
     // can't do it right now because position isn't getting updated with our current html siutation
   }
