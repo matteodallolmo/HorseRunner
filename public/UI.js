@@ -1,10 +1,8 @@
-
-class UI{
+class UI {
   constructor() {
-
     this.backgroundImage = "url('Stage Screens/TitleCard.png')";
     var canvas = document.getElementById("game");
-    canvas.style.backgroundImage= this.backgroundImage;
+    canvas.style.backgroundImage = this.backgroundImage;
     canvas.style.backgroundRepeat = "no-repeat";
     canvas.style.backgroundSize = "cover";
 
@@ -26,36 +24,32 @@ class UI{
         this.currentLevel.handleCollision();
       } else if (this.currentLevel.checkGameState() == 2) {
         this.finished = true;
-        if (this.currentLevel.wonOrLost()==1)
-        {
+        if (this.currentLevel.wonOrLost() == 1) {
           this.levelNum++;
           this.currentLevel = new Level(levelNum);
           this.currentLevel.win();
-        }
-        else {
-          this.gameStillPlaying= false;
+        } else {
+          this.gameStillPlaying = false;
           this.currentLevel.lose();
           this();
         }
-
       }
     }
   }
 
-
   draw() {
-    var ctx = document.getElementById('game').getContext('2d');
+    var ctx = document.getElementById("game").getContext("2d");
 
-    ctx.globalCompositeOperation = 'source-over';
+    ctx.globalCompositeOperation = "source-over";
     ctx.clearRect(0, 0, 1000, 1900); // clear canvas
 
     // Figure out what pen we wanna draw with
-    ctx.fillStyle = 'rgba(0, 153, 255, 1)';
-    ctx.strokeStyle = 'rgba(0, 153, 255, 0.4)';
+    ctx.fillStyle = "rgba(0, 153, 255, 1)";
+    ctx.strokeStyle = "rgba(0, 153, 255, 0.4)";
 
     ctx.save();
     ctx.lineWidth = 6;
-    //this.currentLevel.display(ctx);
+    // this.currentLevel.display(ctx);
     ctx.restore();
 
     window.requestAnimationFrame(this.draw.bind(this));
@@ -64,8 +58,6 @@ class UI{
   initializeAnimation() {
     window.requestAnimationFrame(this.draw.bind(this));
   }
-
-
 }
 
-  const ui = new UI();
+const ui = new UI();
