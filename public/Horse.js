@@ -13,7 +13,6 @@ class Horse {
     this.position = 0;
     this.lanePosition = lanePos; // the verticle position of the Horse when not jumping
     this.recentlyJumped = false; // determines jumping cooldown to make jump less spammable
-    this.isJumping = false; // stores whether the horse is jumping
     this.velocity = 0; // velocity of the horse
     this.acceleration = 0; // acceleration of the horse
     this.raceTime = null; //the time it took for the horse to finish, is null if hasn't finished yet
@@ -34,31 +33,29 @@ class Horse {
       this.velocity * time +
       (this.acceleration / 2) * (time ^ 2);
   }
+
   genVelocity(time) {
     //time is a temporary variable that we might have to change
     //time represents the time between each frame
     this.velocity = this.velocity + this.acceleration * time;
   }
+
   jump() {
     if (this.recentlyJumped == true) {
       return;
     }
-    this.isJumping = true;
     this.recentlyJumped = true;
-    const jumpUp = setInterval(() => {
-      this.lanePosition -= 0.05 * this.spriteDims.height;
+    let acc = -0.2;
+    const jump = setInterval(() => {
+      if (acc <= 0.21) {
+        this.lanePosition += acc * this.spriteDims.height;
+        acc += 0.01;
+      }
     }, 10);
     setTimeout(() => {
-      this.isJumping = false;
-      clearInterval(jumpUp);
-      const jumpDown = setInterval(() => {
-        this.lanePosition += 0.05 * this.spriteDims.height;
-      }, 10);
-      setTimeout(() => {
-        this.recentlyJumped = false;
-        clearInterval(jumpDown);
-      }, 200);
-    }, 200);
+      clearInterval(jump);
+      this.recentlyJumped = false;
+    }, 600);
   }
 
   drawFrame(ctx, frameNum, canvasX) {
