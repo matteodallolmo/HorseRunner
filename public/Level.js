@@ -17,8 +17,8 @@ class Level {
     this.isFinished = false;
     this.initialTime = Date.now;
     this.userSprite = new Image(); // Create new img element
-    this.userSprite.src = "./horseSprite.png";
-    this.userPlayer = new PlayerHorse(5, this.userSprite);
+    this.userSprite.src = "./Sprites/horseSprite.png";
+    this.userPlayer = new PlayerHorse(5, 0);
   }
 
   getRandomInt(min, max) {
@@ -74,15 +74,21 @@ class Level {
   playGame() {
     this.populateObstaclesArray();
     this.populateHorseArray();
-    while (!this.isFinishedForAllHorses()) {
-      this.checkForHorseFinish();
-      // for loop for testing purposes only
+    // while (!this.isFinishedForAllHorses()) {
+    //   this.checkForHorseFinish();
+    //   // for loop for testing purposes only
+    //   for (let k = 0; k < this.horseArray.length; k++) {
+    //     this.horseArray[k].position += 500;
+    //   }
+    // }
+
+    while (this.checkGameState() == 0) {
+      if (this.isFinishedForAllHorses()) {
+        break;
+      }
       for (let k = 0; k < this.horseArray.length; k++) {
         this.horseArray[k].position += 500;
       }
-    }
-
-    while (this.checkGameState() == 0) {
       this.checkForHorseFinish();
       this.checkGameState();
     }
@@ -90,19 +96,38 @@ class Level {
     // can't do it right now because position isn't getting updated with our current html siutation
   }
 
+  // checkGameState() { // ariana code
+  //   let playerPos = this.userPlayer.getPosition();
+  //   console.log(playerPos);
+
+  //   if (
+  //     this.obstaclesArray[playerPos] == true &&
+  //     !this.userPlayer.isJumping
+  //   ) {
+  //     console.log("collision");
+  //     return 1;
+  //   }
+
+  //   if (playerPos >= 2000) {
+  //     console.log("race over");
+  //     return 2;
+  //   }
+  //   return 0;
+  // }
+
   checkGameState() { // ariana code
-    let playerPos = this.userPlayer.getPosition();
-    console.log(this.playerPos);
+    
+    console.log(this.userPlayer.position);
 
     if (
-      this.obstaclesArray[this.playerPos] == true &&
+      this.obstaclesArray[this.userPlayer.position] == true &&
       !this.userPlayer.isJumping
     ) {
       console.log("collision");
       return 1;
     }
 
-    if (this.playerPos == 2000 || this.playerPos > 2000) {
+    if (this.userPlayer.position >= 2000) {
       console.log("race over");
       return 2;
     }
@@ -113,9 +138,7 @@ class Level {
     // Ariana code
     for (var x = 0; x < 6; x++) {
       if (
-        this.horseArray[x].getPosition() == 2000 ||
-        this.horseArray[x].getPosition() > 2000
-      ) {
+        this.horseArray[x].getPosition() >= 2000) {
         currentTime = Date.now;
         this.horseArray[x].setRaceTime(currentTime - initialTime);
       }
@@ -127,6 +150,7 @@ class Level {
   }
 
   isFinishedForAllHorses() {
+
     // Ariana code
     for (var x = 0; x < 5; x++) {
       if (this.horseArray[x].getTime() == null) {
