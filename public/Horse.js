@@ -59,11 +59,9 @@ class Horse {
         clearInterval(jumpDown);
       }, 200);
     }, 200);
-
-    //someone has to figure out the animation here.
   }
 
-  drawFrame(canvas, ctx, frameNum, canvasX) {
+  drawFrame(ctx, frameNum, canvasX) {
     ctx.drawImage(
       this.img,
       this.spriteDims.startXPos +
@@ -79,28 +77,24 @@ class Horse {
   }
 
   animate() {
+    // loop through animation frames
+    setInterval(() => {
+      this.currentLoopIndex++;
+      if (this.currentLoopIndex >= this.cycleLoop.length) {
+        this.currentLoopIndex = 0;
+      }
+      this.movement(1);
+    }, 69);
+  }
+
+  draw() {
+    // draw animation frames onto canvas
     let canvas = document.querySelector("canvas");
     let ctx = canvas.getContext("2d");
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    this.drawFrame(
-      canvas,
-      ctx,
-      this.cycleLoop[this.currentLoopIndex],
-      this.position
-    );
-
-    this.currentLoopIndex++;
-
-    if (this.currentLoopIndex >= this.cycleLoop.length) {
-      this.currentLoopIndex = 0;
-    }
-    this.movement(1);
-    window.requestAnimationFrame(this.animate.bind(this));
-  }
-
-  initializeAnimation() {
-    window.requestAnimationFrame(this.animate.bind(this));
+    this.drawFrame(ctx, this.cycleLoop[this.currentLoopIndex], this.position);
+    window.requestAnimationFrame(this.draw.bind(this));
   }
 
   setRaceTime(time) {
