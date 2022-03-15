@@ -90,7 +90,6 @@ class Level {
         this.horseArray[k].position += 500;
       }
       this.checkForHorseFinish();
-      this.checkGameState();
     }
     // need to add checkForRoboHorseFinish and run it all the time
     // can't do it right now because position isn't getting updated with our current html siutation
@@ -138,8 +137,7 @@ class Level {
     // Ariana code
     for (var x = 0; x < 6; x++) {
       if (this.horseArray[x].getPosition() >= 2000) {
-        currentTime = Date.now;
-        this.horseArray[x].setRaceTime(currentTime - initialTime);
+        this.horseArray[x].setRaceTime(Date.now - this.initialTime);
         if (this.winner == null) {
           this.winner = this.horseArray[x];
           console.log("race is over, we have a winner!");
