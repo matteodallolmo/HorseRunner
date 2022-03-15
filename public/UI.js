@@ -1,12 +1,11 @@
 
 class UI{
   constructor() {
-    this.backgroundImage = new Image();
-    this.backgroundImage.src = "StageScreens/TitleCard.svg";
-    var canvas = document.getElementById("game");
-    canvas.style.backgroundImage= this.backgroundImage;
-    canvas.style.backgroundRepeat = "no-repeat";
-    canvas.style.backgroundSize = "cover";
+    let canvas = document.getElementById("game");
+    let ctx = canvas.getContext('2d');
+    this.backgroundImage = new Image(canvas.width,canvas.height);
+    this.backgroundImage.src = 'StageScreens/TitleCard.svg';
+    ctx.drawImage(this.backgroundImage,0,0,canvas.width, canvas.height)
 
     this.levelNum = 1;
     this.currentLevel = new Level(this.levelNum);
