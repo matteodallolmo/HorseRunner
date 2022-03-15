@@ -58,17 +58,19 @@ introScreen()
 
   draw() {
 
-    this.ctx.globalCompositeOperation = 'source-over';
-    this.ctx.clearRect(0, 0, 1000, 1900); // clear canvas
+    let canvas = document.getElementById("game");
+    let ctx = canvas.getContext('2d');
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.clearRect(0, 0, canvas.width, canvas.height); // clear canvas
 
     // Figure out what pen we wanna draw with
-    this.ctx.fillStyle = 'rgba(0, 153, 255, 1)';
-    this.ctx.strokeStyle = 'rgba(0, 153, 255, 0.4)';
+    ctx.fillStyle = 'rgba(0, 153, 255, 1)';
+    ctx.strokeStyle = 'rgba(0, 153, 255, 0.4)';
 
-    this.ctx.save();
-    this.ctx.lineWidth = 6;
+    ctx.save();
+    ctx.lineWidth = 6;
     //this.currentLevel.display(ctx);
-    this.ctx.restore();
+    ctx.restore();
 
     window.requestAnimationFrame(this.draw.bind(this));
   }

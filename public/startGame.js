@@ -11,7 +11,7 @@ class startGame{
       //ctx.drawImage(this.backgroundImage,0,0,canvas.width, canvas.height);
       ctx.clearRect(0,0, canvas.width, canvas.height);
       this.backgroundImage = new Image(canvas.width,canvas.height);
-      this.backgroundImage.src = './Stage-Screens/TitleCard.png';
+      this.backgroundImage.src = './StageScreens/TitleCard.svg';
       ctx.drawImage(this.backgroundImage,0,0,canvas.width, canvas.height);
 
     },400)
@@ -75,7 +75,7 @@ setTimeout(()=>{  camel3.velocity = 1+Math.random()+Math.random();
 
   constructor(){
     this.backgroundImage = new Image();// Create new img element
-    this.backgroundImage.src = './Stage-Screens/TitleCard.png'; // Set source path
+    this.backgroundImage.src = './StageScreens/TitleCard.svg'; // Set source path
     this.canvas = document.getElementById('game')
     this.ctx = this.canvas.getContext('2d')
     this.ctx.drawImage(this.backgroundImage,0,0,this.canvas.width,this.canvas.height)

@@ -87,7 +87,7 @@ class Level {
       let cpu5 = new RoboHorse (4, this.levelNum);
       let cpu6 = new RoboHorse (5, this.levelNum);
 
-      this.horsePerLane = [cpu1, cpu2, this.player, cpu4, cpu5, cpu6];
+      this.horsePerLane = [cpu1, cpu2, this.userPlayer, cpu4, cpu5, cpu6];
     }
   }
 
@@ -112,18 +112,18 @@ class Level {
   }
 
   checkGameState() {
-    let playerPos = this.player.position;
+    let playerPos = this.userPlayer.position;
     console.log(playerPos);
 
-    if (this.obstaclesArray[playerPos] == true && !this.player.isJumping) {
+    if (this.obstaclesArray[playerPos] == true && !this.userPlayer.isJumping) {
       return 1;
     }
     if (playerPos == 2000) {
       this.currentTime  = Date.now;
-      this.player.raceTime = (currentTime - this.initialTime);
+      this.userPlayer.raceTime = (currentTime - this.initialTime);
       if (this.winner == null)
       {
-        this.winner = this.player;
+        this.winner = this.userPlayer;
       }
       return 2;
 
@@ -167,7 +167,7 @@ class Level {
   win(){
     this.won = true;
     this.lost = false;
-    this.backgroundImage = "url('Stage Screens/scoreboard.png')";
+    this.backgroundImage = "url('StageScreens/Scoreboard.svg')";
     var canvas = document.getElementById("game");
     canvas.style.backgroundImage = this.backgroundImage;
     canvas.style.backgroundRepeat = "no-repeat";
@@ -177,7 +177,7 @@ class Level {
   lose(){
     this.lost = true;
     this.won = false;
-    this.backgroundImage = "url('Stage Screens/GameOver.png')";
+    this.backgroundImage = "url('StageScreens/GameOver.svg')";
     var canvas = document.getElementById("game");
     canvas.style.backgroundImage = this.backgroundImage;
     canvas.style.backgroundRepeat = "no-repeat";
@@ -186,8 +186,8 @@ class Level {
 
 
   handleCollision() {
-    this.player.velocity = 0;
-    this.player.acceleration = 0;
+    this.userPlayer.velocity = 0;
+    this.userPlayer.acceleration = 0;
     //also needs to disable uncklickable, but we don't have any event listeners for that right now.
   }
 

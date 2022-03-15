@@ -9,7 +9,7 @@ class Scoreboard {
       //document.body.style.backgroundRepeat = "no-repeat";
       //document.body.style.backgroundSize = "cover";
       this.background = new Image();
-      this.background.src = "./Stage Screens/scoreboard.png";
+      this.background.src = "./StageScreens/scoreboard.svg";
     }
 
     draw() {
