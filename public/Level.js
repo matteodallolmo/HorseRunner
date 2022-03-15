@@ -21,9 +21,7 @@ class Level {
     console.log ('level created');
     this.isFinished = false;
     this.initialTime = Date.now;
-    this.userSprite = new Image();// Create new img element
-    this.userSprite.src = './Sprites/horseSprite.png';
-    this.player = new PlayerHorse(3,this.userSprite);
+    this.userPlayer = new PlayerHorse(5,0);
   }
 
   getRandomInt(min, max)
