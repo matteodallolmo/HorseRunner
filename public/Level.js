@@ -17,9 +17,7 @@ class Level {
     this.winner = null;
     this.isFinished = false;
     this.initialTime = Date.now;
-    this.userSprite = new Image();// Create new img element
-    this.userSprite.src = './horseSprite.png';
-    this.userPlayer = new PlayerHorse(5,this.userSprite);
+    this.userPlayer = new PlayerHorse(5,0);
   }
 
   getRandomInt(min, max)
