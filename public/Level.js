@@ -137,15 +137,15 @@ class Level {
   checkForHorseFinish() {
     // Ariana code
     for (var x = 0; x < 6; x++) {
-      if (
-        this.horseArray[x].getPosition() >= 2000) {
+      if (this.horseArray[x].getPosition() >= 2000) {
         currentTime = Date.now;
         this.horseArray[x].setRaceTime(currentTime - initialTime);
+        if (this.winner == null) {
+          this.winner = this.horseArray[x];
+          console.log("race is over, we have a winner!");
+        }
       }
-      if (this.winner == null) {
-        this.winner = this.horseArray[x];
-        console.log("race is over, we have a winner!");
-      }
+
     }
   }
 
