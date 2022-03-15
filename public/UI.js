@@ -1,8 +1,8 @@
 
 class UI{
   constructor() {
-
-    this.backgroundImage = "url('Stage Screens/TitleCard.png')";
+    this.backgroundImage = new Image();
+    this.backgroundImage.src = "StageScreens/TitleCard.svg";
     var canvas = document.getElementById("game");
     canvas.style.backgroundImage= this.backgroundImage;
     canvas.style.backgroundRepeat = "no-repeat";
