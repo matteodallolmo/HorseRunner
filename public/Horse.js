@@ -1,28 +1,6 @@
 class Horse {
-  constructor(
-    lanePos,
-    levelNum //level 0 for PlayerHorse
-  ) {
-    this.spriteArray = [
-      "Sprites/horseSprite.png",
-      "Sprites/turtleSprite.png",
-      "Sprites/camelSprite.png",
-      "Sprites/zebraSprite.png",
-      "Sprites/cheetahSprite.png",
-    ];
-    this.position = 0;
-    this.lanePosition = lanePos; // the verticle position of the Horse when not jumping
-    this.recentlyJumped = false; // determines jumping cooldown to make jump less spammable
-    this.velocity = 0; // velocity of the horse
-    this.acceleration = 0; // acceleration of the horse
-    this.raceTime = null; //the time it took for the horse to finish, is null if hasn't finished yet
-    this.spriteSheet = this.spriteArray[levelNum]; // sprite sheet of the horse, animate by css
-    this.img = new Image();
-    this.img.src = this.spriteSheet;
-    this.spriteDims = new SpriteDimensions(levelNum);
-    this.cycleLoop = [0, 1, 2, 3, 4, 5];
-    this.currentLoopIndex = 0;
-  }
+
+
   movement(time) {
     //move expected amount of space over the refresh time
     //run every frame when enabled
@@ -32,6 +10,7 @@ class Horse {
       this.position +
       this.velocity * time +
       (this.acceleration / 2) * (time ^ 2);
+
   }
 
   genVelocity(time) {
@@ -73,6 +52,23 @@ class Horse {
     );
   }
 
+
+  startGame()
+{
+  setTimeout(() => {
+    let canvas = document.getElementById("game");
+    let ctx = canvas.getContext('2d');
+    //this.backgroundImage = new Image(canvas.width,canvas.height);
+  //  this.backgroundImage.src = './Stage-Screens/TitleCard.png';
+    //ctx.drawImage(this.backgroundImage,0,0,canvas.width, canvas.height);
+    ctx.clearRect(0,0, canvas.width, canvas.height);
+    this.backgroundImage = new Image(canvas.width,canvas.height);
+    this.backgroundImage.src = './Track/CompleteTrack.png';
+    ctx.drawImage(this.backgroundImage,0,0,canvas.width, canvas.height);
+
+  },400)
+
+}
   animate() {
     // loop through animation frames
     setInterval(() => {
@@ -91,7 +87,9 @@ class Horse {
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     this.drawFrame(ctx, this.cycleLoop[this.currentLoopIndex], this.position);
+    window.requestAnimationFrame(this.startGame.bind(this));
     window.requestAnimationFrame(this.draw.bind(this));
+
   }
 
   setRaceTime(time) {
@@ -101,4 +99,31 @@ class Horse {
   getTime() {
     return this.raceTime;
   }
+
+  constructor(
+    lanePos,
+    levelNum //level 0 for PlayerHorse
+  ) {
+    this.spriteArray = [
+      "Sprites/horseSprite.png",
+      "Sprites/turtleSprite.png",
+      "Sprites/camelSprite.png",
+      "Sprites/zebraSprite.png",
+      "Sprites/cheetahSprite.png",
+    ];
+    this.position = 0;
+    this.lanePosition = lanePos; // the verticle position of the Horse when not jumping
+    this.recentlyJumped = false; // determines jumping cooldown to make jump less spammable
+    this.velocity = 0; // velocity of the horse
+    this.acceleration = 0; // acceleration of the horse
+    this.raceTime = null; //the time it took for the horse to finish, is null if hasn't finished yet
+    this.spriteSheet = this.spriteArray[levelNum]; // sprite sheet of the horse, animate by css
+    this.img = new Image();
+    this.img.src = this.spriteSheet;
+    this.spriteDims = new SpriteDimensions(levelNum);
+    this.cycleLoop = [0, 1, 2, 3, 4, 5];
+    this.currentLoopIndex = 0;
+  }
+
+
 }
