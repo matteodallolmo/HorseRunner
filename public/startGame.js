@@ -35,8 +35,10 @@ class startGame{
 
   }
 //creates camels and assigns
-  gameStarter()
+  gameStarter(x)
   {
+    if(x == true)
+    {
     let canvas = document.getElementById("game");
     let ctx = canvas.getContext('2d');
     let self = this;
@@ -44,7 +46,7 @@ class startGame{
 
       this.canvas.addEventListener("click", function (evt) {
 
-
+self.spritesGenerated = true;
         self.startGame()
         let camel = new Horse(240,2);
 
@@ -71,9 +73,15 @@ setTimeout(()=>{  camel3.velocity = 1+Math.random()+Math.random();
 
 
       })
+      this.spritesGenerated = self.spritesGenerated;
+    }
+    else{
+
+    }
   }
 
   constructor(){
+    this.spritesGenerated = false;
     this.backgroundImage = new Image();// Create new img element
     this.backgroundImage.src = './Stage-Screens/TitleCard.png'; // Set source path
     this.canvas = document.getElementById('game')
