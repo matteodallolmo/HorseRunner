@@ -1,6 +1,34 @@
 class Horse {
+<<<<<<< HEAD
+  constructor(
+    lanePos,
+    levelNum //level 0 for PlayerHorse
+  ) {
+    this.spriteArray = [
+      "Sprites/horseSprite.png",
+      "Sprites/turtleSprite.png",
+      "Sprites/camelSprite.png",
+      "Sprites/zebraSprite.png",
+      "Sprites/cheetahSprite.png",
+    ];
+    this.position = 0;
+    this.lanePosition = lanePos; //the verticle position of the Horse when not jumping
+    this.recentlyJumped = false; // determines jumping cooldown to make jump less spammable
+    this.isJumping = false; // stores whether the horse is jumping
+    this.velocity = 0; // velocity of the horse
+    this.acceleration = 0; // acceleration of the horse
+    this.raceTime = null; //the time it took for the horse to finish, is null if hasn't finished yet
+    this.spriteSheet = this.spriteArray[levelNum]; // sprite sheet of the horse, animate by css
+    this.img = new Image();
+    this.img.src = this.spriteSheet;
+    this.spriteDims = new SpriteDimensions(levelNum);
+    this.cycleLoop = [0, 1, 2, 3, 4, 5];
+    this.currentLoopIndex = 0;
+  }
+=======
 
 
+>>>>>>> upstream/main
   movement(time) {
     //move expected amount of space over the refresh time
     //run every frame when enabled
@@ -10,19 +38,40 @@ class Horse {
       this.position +
       this.velocity * time +
       (this.acceleration / 2) * (time ^ 2);
+<<<<<<< HEAD
+  }
+=======
 
   }
 
+>>>>>>> upstream/main
   genVelocity(time) {
     //time is a temporary variable that we might have to change
     //time represents the time between each frame
     this.velocity = this.velocity + this.acceleration * time;
   }
+<<<<<<< HEAD
+=======
 
+>>>>>>> upstream/main
   jump() {
     if (this.recentlyJumped == true) {
       return;
     }
+<<<<<<< HEAD
+    this.isJumping = true;
+    this.recentlyJumped = true;
+    setTimeout(() => {
+      this.isJumping = false;
+    }, 1000);
+    setTimeout(() => {
+      this.recentlyJumped = false;
+    }, 500);
+    //someone has to figure out the animation here.
+  }
+
+  drawFrame(canvas, ctx, frameNum, canvasX) {
+=======
     this.recentlyJumped = true;
     let acc = -0.2;
     const jump = setInterval(() => {
@@ -38,6 +87,7 @@ class Horse {
   }
 
   drawFrame(ctx, frameNum, canvasX) {
+>>>>>>> upstream/main
     ctx.drawImage(
       this.img,
       this.spriteDims.startXPos +
@@ -52,6 +102,19 @@ class Horse {
     );
   }
 
+<<<<<<< HEAD
+  animate() {
+    let canvas = document.querySelector("canvas");
+    let ctx = canvas.getContext("2d");
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    this.drawFrame(
+      canvas,
+      ctx,
+      this.cycleLoop[this.currentLoopIndex],
+      this.position
+    );
+=======
 
   startGame()
 {
@@ -65,9 +128,17 @@ class Horse {
     this.backgroundImage = new Image(canvas.width,canvas.height);
     this.backgroundImage.src = './Track/CompleteTrack.png';
     ctx.drawImage(this.backgroundImage,0,0,canvas.width, canvas.height);
+>>>>>>> upstream/main
 
   },400)
 
+<<<<<<< HEAD
+    if (this.currentLoopIndex >= this.cycleLoop.length) {
+      this.currentLoopIndex = 0;
+    }
+    this.movement(1);
+    window.requestAnimationFrame(this.animate.bind(this));
+=======
 }
   animate() {
     // loop through animation frames
@@ -78,6 +149,7 @@ class Horse {
       }
       this.movement(1);
     }, 69);
+>>>>>>> upstream/main
   }
 
   draw() {
@@ -99,6 +171,8 @@ class Horse {
   getTime() {
     return this.raceTime;
   }
+<<<<<<< HEAD
+=======
 
   constructor(
     lanePos,
@@ -126,4 +200,5 @@ class Horse {
   }
 
 
+>>>>>>> upstream/main
 }

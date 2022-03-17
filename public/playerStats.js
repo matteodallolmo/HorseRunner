@@ -1,48 +1,40 @@
 let PlayerStats = {
-  highestLevelName : null,
+  highestLevelName: null,
   highestLevelNumber: null,
-  fastestTime : null,
-  playerName : null,
+  fastestTime: null,
+  playerName: null,
 
   functions: {
-    setName : function(name)
-    {
+    setName: function (name) {
       PlayerStats.playerName = name;
     },
 
-    getName: function ()
-    {
+    getName: function () {
       return PlayerStats.playerName;
     },
 
-    setFastestTime : function (time)
-    {
+    setFastestTime: function (time) {
       PlayerStats.fastestTime = time;
     },
 
-    getFastestTime : function ()
-    {
+    getFastestTime: function () {
       return PlayerStats.fastestTime;
     },
 
-    setHighestLevelName : function (name)
-    {
+    setHighestLevelName: function (name) {
       PlayerStats.highestLevelName = name;
     },
 
-    getHighestLevelName : function ()
-    {
+    getHighestLevelName: function () {
       return PlayerStats.highestLevelName;
     },
 
-    setHighestLevelNumber : function (newHighNum)
-    {
+    setHighestLevelNumber: function (newHighNum) {
       PlayerStats.highestLevelNumber = newHighNum;
     },
 
-    getHighestLevelNumber : function ()
-    {
+    getHighestLevelNumber: function () {
       return PlayerStats.highestLevelNumber;
-    }
-  }
-}
+    },
+  },
+};
