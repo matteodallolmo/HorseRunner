@@ -64,9 +64,9 @@ class startGame{
 
 
 setTimeout(()=>{  camel3.velocity = 1+Math.random()+Math.random();
-  camel2.velocity =1+ Math.random()+Math.random();
-  camel1.velocity = 1+ Math.random()+Math.random();
-  camel.velocity = 1+ Math.random()+Math.random();},3000)
+  camel2.velocity =.3+ Math.random()+Math.random();
+  camel1.velocity = .3+ Math.random()+Math.random();
+  camel.velocity = .3+ Math.random()+Math.random();},3000)
 
 
 
