@@ -61,23 +61,20 @@ animate()
   let canvas = document.querySelector('canvas');
   let ctx = canvas.getContext('2d');
 
-this.drawFrame(canvas, ctx, this.cycleLoop[this.currentLoopIndex], this.position);
+  this.drawFrame(canvas, ctx, this.cycleLoop[this.currentLoopIndex], this.position);
 
-this.currentLoopIndex++;
-if (this.currentLoopIndex >= this.cycleLoop.length) {
+  this.currentLoopIndex++;
+  if (this.currentLoopIndex >= this.cycleLoop.length) {
 
-    this.currentLoopIndex = 0;
+      this.currentLoopIndex = 0;
 
-}
+  }
 
-this.movement(1);
-
-
-window.requestAnimationFrame(this.startGame.bind(this));
-window.requestAnimationFrame(this.animate.bind(this));
+  this.movement(1);
 
 
-
+  window.requestAnimationFrame(this.startGame.bind(this));
+  window.requestAnimationFrame(this.animate.bind(this));
 
 }
 
