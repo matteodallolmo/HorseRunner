@@ -1,7 +1,4 @@
-
-
-
-class RoboHorse extends Horse{
+class RoboHorse extends Horse {
 
   constructor (lanePos, levelNum)
   {
