@@ -46,27 +46,31 @@ class startGame{
 
 
         self.startGame()
-        let camel = new Horse(240,2);
+        let camel = new Horse(240,0);
 
-         let camel1 = new Horse(320,2);
+         let camel1 = new Horse(320,1);
 
          let camel2 = new Horse(400,2);
 
-         let camel3 = new Horse(480,2);
+         let camel3 = new Horse(480,3);
+
+         let camel4 = new Horse(560,4);
         setTimeout(()=>{
           camel1.animate();
           camel.animate();
           camel2.animate();
           camel3.animate();
+          camel4.animate();
         },1000)
 
 
 
 
 setTimeout(()=>{  camel3.velocity = 1+Math.random()+Math.random();
-  camel2.velocity =1+ Math.random()+Math.random();
-  camel1.velocity = 1+ Math.random()+Math.random();
-  camel.velocity = 1+ Math.random()+Math.random();},3000)
+  camel2.velocity =.3+ Math.random()+Math.random();
+  camel1.velocity = .3+ Math.random()+Math.random();
+  camel.velocity = .3+ Math.random()+Math.random();},3000)
+  camel4.velocity =.3+ Math.random()+Math.random();
 
 
 

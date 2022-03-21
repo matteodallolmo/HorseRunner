@@ -1,5 +1,3 @@
-
-
 class PlayerHorse extends Horse
 {
   constructor(lanePos, levelNum) {
