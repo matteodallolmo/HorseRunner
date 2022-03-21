@@ -86,53 +86,55 @@ class Level {
     }
   }
 
-  playGame()
-  {
-    this.populateObstaclesArray ();
-    this.populateHorseArray ();
-    while (!this.isFinishedForAllHorses())
-    {
-      this.checkForHorseFinish();
-      // for loop for testing purposes only
-      for (let k = 0; k < this.horseArray.length; k++)
-      {
+  playGame() {
+    this.populateObstaclesArray();
+    this.populateHorseArray();
+
+    while (this.checkGameState() == 0) {
+      if (this.isFinishedForAllHorses()) {
+        break;
+      }
+      for (let k = 0; k < this.horseArray.length; k++) {
         this.horseArray[k].position += 500;
       }
+      this.checkForHorseFinish();
     }
     // need to add checkForRoboHorseFinish and run it all the time
     // can't do it right now because position isn't getting updated with our current html siutation
   }
 
-  checkGameState() // ariana code
-  {
-    let playerPos = this.userPlayer.getPosition();
-    console.log(this.playerPos);
+  checkGameState() { // ariana code
+    
+    console.log(this.userPlayer.position);
 
-    if (this.obstaclesArray[this.playerPos] == true && !this.userPlayer.isJumping)
-    {
-      console.log ("collision");
+    if (
+      this.obstaclesArray[this.userPlayer.position] == true &&
+      !this.userPlayer.isJumping
+    ) {
+      console.log("collision");
       return 1;
     }
 
-    if (this.playerPos == 2000 || this.playerPos > 2000) {
-      console.log ("race over");
+    if (this.userPlayer.position >= 2000) {
+      console.log("race over");
       return 2;
     }
     return 0;
   }
 
-  checkForHorseFinish() { // Ariana code
+  checkForHorseFinish() {
+    // Ariana code
     for (var x = 0; x < 6; x++) {
-        if (this.horseArray[x].getPosition() == 2000 || this.horseArray[x].getPosition() > 2000) {
-          currentTime = Date.now;
-          this.horseArray[x].setRaceTime(currentTime - initialTime);
-        }
+      if (this.horseArray[x].getPosition() >= 2000) {
+        this.horseArray[x].setRaceTime(Date.now - this.initialTime);
         if (this.winner == null) {
           this.winner = this.horseArray[x];
           console.log("race is over, we have a winner!");
-          }
         }
+      }
+
     }
+  }
 
   isFinishedForAllHorses() { // Ariana code
     for (var x = 0; x < 5; x++)
