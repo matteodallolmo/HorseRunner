@@ -57,6 +57,7 @@ startGame()
 
 animate()
   {
+    fixingAnimationRate
     let then = performance.now();
     const interval = 1000 / 60;
 
