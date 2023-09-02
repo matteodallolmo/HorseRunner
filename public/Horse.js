@@ -53,28 +53,47 @@ startGame()
 
 }
 
-
 //repository matteo
+
 animate()
   {
+    fixingAnimationRate
+    let then = performance.now();
+    const interval = 1000 / 60;
 
+    const animateLoop = (now) => {
+      requestAnimationFrame(animateLoop);
+      const delta = now - then;
+
+      if (delta > interval) {
+        then = now - (delta % interval);
+        this.draw();
+        this.startGame();
+      }
+    };
+    requestAnimationFrame(animateLoop);
+  }
+
+  draw()
+  {
     let canvas = document.querySelector('canvas');
     let ctx = canvas.getContext('2d');
 
-    this.drawFrame(canvas, ctx, this.cycleLoop[this.currentLoopIndex], this.position);
-
-    this.currentLoopIndex++;
-    if (this.currentLoopIndex >= this.cycleLoop.length)
+    this.currentLoopCounter++;
+    if(this.currentLoopCounter == 4)
     {
-      this.currentLoopIndex = 0;
+      this.currentLoopIndex++;
+      this.currentLoopCounter = 0;
     }
 
-    this.movement(1);
-    
-    window.requestAnimationFrame(this.startGame.bind(this));
-    window.requestAnimationFrame(this.animate.bind(this));
-  }
+    if (this.currentLoopIndex >= this.cycleLoop.length) {
+        this.currentLoopIndex = 0;
+    }
 
+    this.drawFrame(canvas, ctx, this.cycleLoop[this.currentLoopIndex], this.position);
+
+    this.movement(1);
+  }
 
   setRaceTime(time)
   {
@@ -107,6 +126,7 @@ animate()
     this.spriteDims = new SpriteDimensions(levelNum);
     this.cycleLoop = [0, 1, 2, 3, 4, 5];
     this.currentLoopIndex = 0;
+    this.currentLoopCounter = 0;
   }
 
 }
